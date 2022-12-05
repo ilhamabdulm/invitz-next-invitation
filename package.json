@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -p 4173",
     "lint": "next lint"
   },
   "dependencies": {
@@ -19,6 +19,7 @@
     "react-audio-player": "^0.17.0",
     "react-dom": "18.2.0",
     "react-tsparticles": "^2.5.3",
+    "sharp": "^0.31.2",
     "tsparticles": "^2.5.3"
   },
   "devDependencies": {

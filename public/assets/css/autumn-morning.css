@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap");
+body {
+  font-family: "Poppins", sans-serif;
+  /* background-color: #e9f4fd; */
+  background-position: center;
+  background-size: 150%;
+  /* background-repeat: no-repeat; */
+  background-color: #faf3e5;
+  color: #3c2317;
+  overflow-x: hidden;
+}
+
+#hero {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  background-image: url("../theme/autumn-morning/autumn-hero-bg.webp");
+  position: relative;
+}
+
+#countdown::after {
+  content: "";
+  background: url("../theme/autumn-morning/autumn-morning-brush-large.webp");
+  width: 100%;
+  height: 400px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: -7rem;
+  transform: rotate(180deg);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Courgette", cursive;
+}
+
+.couple-photo {
+  background-image: url("../theme/autumn-morning/border-autumn-morning.webp");
+  border-radius: 50%;
+  width: 320px;
+  height: 320px;
+  background-position: center;
+  background-size: contain;
+  object-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 724px) {
+  #hero::before {
+    width: 150px;
+    height: 150px;
+    left: -3rem;
+    top: -3rem;
+  }
+
+  #hero::after {
+    width: 150px;
+    height: 150px;
+    right: -2rem;
+  }
+
+  #countdown::after {
+    top: -12rem;
+  }
+}

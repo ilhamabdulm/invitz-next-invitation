@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Parisienne&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+  /* background-color: #e9f4fd; */
+  background-position: center;
+  /* background-repeat: no-repeat; */
+  background-color: #e3e3e3;
+  color: #0e260c;
+  overflow-x: hidden;
+}
+
+#hero {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("../theme/flowerly-green/background-hero.png");
+  height: 100vh;
+  position: relative;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Parisienne", cursive;
+}
+
+.couple-photo {
+  background-image: url("../theme/flowerly-green/border-photo-2.png");
+  border-radius: 50%;
+  width: 320px;
+  height: 320px;
+  background-position: center;
+  background-size: contain;
+  object-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 724px) {
+  #hero::before {
+    width: 150px;
+    height: 150px;
+    left: -3rem;
+    top: -3rem;
+  }
+
+  #hero::after {
+    width: 150px;
+    height: 150px;
+    right: -2rem;
+  }
+
+  #countdown::after {
+    top: -12rem;
+  }
+}

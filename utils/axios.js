@@ -2,7 +2,7 @@ import axios from "axios";
 
 const mode = process.env.NODE_ENV;
 
-export let BASE_URL = process.env.NEXT_PUBLIC_API_URL;
+export let BASE_URL = process.env.NEXT_PUBLIC_API_URL || "https://api.invitz.me/api/v1/";
 
 const instance = axios.create({
   baseURL: BASE_URL,

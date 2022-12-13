@@ -1,18 +1,24 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
 import AutumnMorningTheme from "../components/templates/autumn-morning";
+import CalmBlueTheme from "../components/templates/calm-blue";
 import FlowerlyGreenTheme from "../components/templates/flowerly-green";
+import SimpleWhiteTheme from "../components/templates/simple-white";
+import SoftPurpleTheme from "../components/templates/soft-purple";
 
 const themes = {
   "flowerly-green": FlowerlyGreenTheme,
   "autumn-morning": AutumnMorningTheme,
+  "soft-purple": SoftPurpleTheme,
+  "calm-blue": CalmBlueTheme,
+  "simple-white": SimpleWhiteTheme,
 };
 
 export default function Home({ data, username }) {
   const { query } = useRouter();
   const { to, gid } = query;
 
-  const ThemeComponent = themes[data.data.selected_theme];
+  const ThemeComponent = themes["simple-white"];
 
   return (
     <div

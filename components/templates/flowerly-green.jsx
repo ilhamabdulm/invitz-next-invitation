@@ -13,6 +13,7 @@ import RSVPSection from "../sections/rsvp";
 import GiftDialog from "../sections/gift-dialog";
 
 import { getGoogleCalendarLink } from "../../utils/common";
+import GallerySection from "../sections/gallery";
 
 const FlowerlyGreenTheme = ({
   data,
@@ -370,58 +371,21 @@ const FlowerlyGreenTheme = ({
               </section>
             ) : null}
 
-            <section id="gallery-container" className="relative">
-              <img
-                src="./assets/theme/flowerly-green/section-left.png"
-                alt="flower-1"
-                className="absolute h-[300px] lg:h-[600px] left-0 bottom-0 -z-10"
-                data-aos="fade-in"
-              />
-              <div
-                id="gallery"
-                className="max-lg mx-auto px-8 mb-24 flex flex-col items-center z-10"
-              >
-                <div className="flex flex-col items-center gap-2 z-20">
-                  <img
-                    className="w-[200px]"
-                    src="./assets/theme/flowerly-green/title-border.png"
-                    alt="ornament-2"
-                  />
-                  <h2 className="text-center text-3xl">Our Gallery</h2>
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 gallery mt-12">
-                  {data?.gallery.map((img) => {
-                    return (
-                      <a
-                        href={img}
-                        className="lg:w-[400px] w-full h-auto lg:h-[400px]"
-                        data-aos="zoom-in"
-                      >
-                        <img
-                          className="object-cover lg:w-[400px] w-full h-auto lg:h-[400px]"
-                          src={img}
-                          alt="gallery-1"
-                        />
-                      </a>
-                    );
-                  })}
-                </div>
-              </div>
-              <img
-                src="./assets/theme/flowerly-green/section-right.png"
-                alt="flower-1"
-                className="absolute h-[300px] lg:h-[600px] top-44 lg:top-0 right-0 -z-10"
-                data-aos="fade-in"
-              />
-            </section>
-
-            <RSVPSection
-              color="#4F4F4F"
-              topOrnament="./assets/theme/flowerly-green/title-border.png"
-              username={username}
-              to={to}
-              gid={gid}
+            <GallerySection
+              gallery={data.gallery}
+              leftOrnament={"./assets/theme/flowerly-green/section-left.png"}
+              rightOrnament={"./assets/theme/flowerly-green/section-right.png"}
             />
+
+            {data.invitation_setup.rsvp === "on" ? (
+              <RSVPSection
+                color="#4F4F4F"
+                topOrnament="./assets/theme/flowerly-green/title-border.png"
+                username={username}
+                to={to}
+                gid={gid}
+              />
+            ) : null}
 
             <WishesSection
               color="#4F4F4F"

@@ -11,17 +11,11 @@ import FooterInvitz from "../sections/footer-invitz";
 import WishesSection from "../sections/wishes";
 import RSVPSection from "../sections/rsvp";
 import GiftDialog from "../sections/gift-dialog";
-
-import { getGoogleCalendarLink } from "../../utils/common";
 import QuotesSection from "../sections/quotes";
 
-const AutumnMorningTheme = ({
-  data,
-  username,
-  refetchData = () => {},
-  to,
-  gid,
-}) => {
+import { getGoogleCalendarLink } from "../../utils/common";
+
+const CalmBlueTheme = ({ data, username, refetchData = () => {}, to, gid }) => {
   const [isOpenCover, setIsOpenCover] = useState(true);
 
   let mounted = false;
@@ -46,7 +40,7 @@ const AutumnMorningTheme = ({
   return (
     <>
       <Head>
-        <link rel="stylesheet" href="./assets/css/autumn-morning.css" />
+        <link rel="stylesheet" href="./assets/css/calm-blue.css" />
       </Head>
       {isOpenCover && to ? (
         <div
@@ -71,7 +65,7 @@ const AutumnMorningTheme = ({
                 onClick={() => {
                   setIsOpenCover(false);
                 }}
-                className="flex items-center text-center justify-center gap-2 bg-[#AA8B56]/70 w-fit text-white !font-semibold rounded-md py-2 px-4 animate__animated animate__pulse animate__infinite infinite animate__slower"
+                className="flex items-center text-center justify-center gap-2 bg-[#006DED]/70 w-fit text-white !font-semibold rounded-md py-2 px-4 animate__animated animate__pulse animate__infinite infinite animate__slower"
               >
                 <i className="fa-sharp fa-solid fa-envelope"></i> Buka Undangan
               </button>
@@ -81,17 +75,22 @@ const AutumnMorningTheme = ({
       ) : (
         <main id="main-content">
           <div
-            id="autumn-morning-theme"
+            id="calm-blue-theme"
             className="w-full min-h-screen max-w-screen overflow-x-hidden"
           >
-            <section id="hero" class="h-screen">
-              <img
-                src="./assets/theme/autumn-morning/autumn-morning-flower-2.webp"
-                alt="flower-1"
-                class="absolute h-[200px] w-[200px] lg:h-[300px] lg:w-[300px] -left-16 lg:-left-20 -top-8"
-                data-aos="fade-down-right"
-              />
-              <div class="h-full text-[#3C2317]" data-aos="zoom-in">
+            <section
+              id="hero"
+              class="h-screen"
+              style={{
+                backgroundImage: data.hero_image
+                  ? `url(${data.hero_image})`
+                  : "url('./assets/bg-wedding-1.webp')",
+              }}
+            >
+              <div
+                class="h-full text-[#3C2317] bg-blue-800/20"
+                data-aos="zoom-in"
+              >
                 <div class="h-full grid place-content-center">
                   <div class="text-center space-y-8">
                     <p class="text-2xl lg:text-3xl">The Wedding of</p>
@@ -107,28 +106,9 @@ const AutumnMorningTheme = ({
                     </div>
                     <p>{data.wedding_date_year}</p>
                   </div>
-                  <div class="flex justify-center mt-8" data-aos="zoom-in">
-                    <img
-                      class="w-[200px] rotate-180"
-                      src="./assets/ornaments/autumn-morning-ornament-branch.webp"
-                      alt="ornament-2"
-                    />
-                  </div>
                 </div>
               </div>
-              <img
-                src="./assets/theme/autumn-morning/autumn-morning-flower-1.webp"
-                alt="flower-1"
-                class="absolute h-[200px] w-[200px] lg:h-[300px] lg:w-[300px] bottom-2 -right-8"
-                data-aos="fade-up-left"
-              />
             </section>
-
-            <img
-              src="./assets/theme/autumn-morning/autumn-morning-double-border.webp"
-              alt="section-border"
-              class="w-full h-32 lg:h-full -mt-16 lg:-mt-32 relative object-cover"
-            />
 
             <section id="couples" class="px-8 mt-12 mb-24 max-lg mx-auto">
               <div class="flex flex-col items-center gap-2">
@@ -169,7 +149,7 @@ const AutumnMorningTheme = ({
                   <div className="couple-photo">
                     <figure className="relative w-[270px] h-[270px] flex items-center justify-center">
                       <Image
-                        className="rounded-full -z-10 object-cover"
+                        className="rounded-md -z-10 object-cover"
                         src={data?.bride_photo}
                         alt="bride-photo"
                         fill
@@ -191,7 +171,7 @@ const AutumnMorningTheme = ({
                   <div className="couple-photo">
                     <figure className="relative w-[270px] h-[270px] flex items-center justify-center">
                       <Image
-                        className="rounded-full -z-10 object-cover"
+                        className="rounded-md -z-10 object-cover"
                         src={data?.groom_photo}
                         alt="groom-photo"
                         fill
@@ -245,7 +225,7 @@ const AutumnMorningTheme = ({
 
               <div className="text-center mt-20 flex justify-center">
                 <a
-                  className="flex items-center justify-center gap-2 w-fit bg-[#AA8B56]/70 px-4 py-2 text-white text-sm cursor-pointer rounded-md"
+                  className="flex items-center justify-center gap-2 w-fit bg-[#006DED]/70 px-4 py-2 text-white text-sm cursor-pointer rounded-md"
                   href={getGoogleCalendarLink(data)}
                   target="_blank"
                   rel="nofollow"
@@ -286,7 +266,7 @@ const AutumnMorningTheme = ({
                     return (
                       <div
                         data-aos="fade-down"
-                        className="bg-[#AA8B56]/10 rounded-lg p-4 shadow-md flex items-start flex-col lg:flex-row gap-4 story-content relative"
+                        className="bg-[#006DED]/10 rounded-lg p-4 shadow-md flex items-start flex-col lg:flex-row gap-4 story-content relative"
                       >
                         <div className="flex-1">
                           <h4 className="!font-semibold text-xl">
@@ -348,8 +328,8 @@ const AutumnMorningTheme = ({
 
             {data.invitation_setup.rsvp === "on" ? (
               <RSVPSection
-                color="#AA8B56"
-                bottomOrnament="./assets/ornaments/autumn-morning-ornament-branch.webp"
+                color="#006DED"
+                bottomOrnament="/assets/ornaments/simple-ornament-2.png"
                 username={username}
                 to={to}
                 gid={gid}
@@ -357,16 +337,16 @@ const AutumnMorningTheme = ({
             ) : null}
 
             <WishesSection
-              color="#AA8B56"
+              color="#006DED"
               wishes={data?.wishes}
-              bottomOrnament="./assets/ornaments/autumn-morning-ornament-branch.webp"
+              bottomOrnament="/assets/ornaments/simple-ornament-2.png"
               username={username}
               to={to}
               refetch={refetchData}
             />
 
             {data?.gift_methods.length ? (
-              <GiftDialog color="#AA8B56" giftMethods={data?.gift_methods} />
+              <GiftDialog color="#006DED" giftMethods={data?.gift_methods} />
             ) : null}
 
             <section
@@ -379,7 +359,7 @@ const AutumnMorningTheme = ({
               </p>
               <img
                 className="w-[200px]"
-                src="./assets/ornaments/autumn-morning-ornament-branch.webp"
+                src="/assets/ornaments/simple-ornament-2.png"
                 alt="ornament-2"
               />
             </section>
@@ -396,4 +376,4 @@ const AutumnMorningTheme = ({
   );
 };
 
-export default AutumnMorningTheme;
+export default CalmBlueTheme;

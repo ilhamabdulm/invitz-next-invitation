@@ -13,9 +13,9 @@ import RSVPSection from "../sections/rsvp";
 import GiftDialog from "../sections/gift-dialog";
 
 import { getGoogleCalendarLink } from "../../utils/common";
-import QuotesSection from "../sections/quotes";
+import GallerySection from "../sections/gallery";
 
-const AutumnMorningTheme = ({
+const SoftPurpleTheme = ({
   data,
   username,
   refetchData = () => {},
@@ -46,7 +46,7 @@ const AutumnMorningTheme = ({
   return (
     <>
       <Head>
-        <link rel="stylesheet" href="./assets/css/autumn-morning.css" />
+        <link rel="stylesheet" href="./assets/css/soft-purple.css" />
       </Head>
       {isOpenCover && to ? (
         <div
@@ -58,12 +58,12 @@ const AutumnMorningTheme = ({
             className="grid place-content-center text-center bg-white/90 w-full h-[400px] lg:w-[600px] rounded-lg p-6 space-y-6 animate__fadeIn"
           >
             <p>You are Invited!</p>
-            <h1 className="text-3xl !font-semibold">
+            <h1 className="text-3xl font-semibold">
               Hi, we are getting married!
             </h1>
             <div>
               <p>Kepada Yth,</p>
-              <p className="text-lg !font-semibold">{to}</p>
+              <p className="text-lg font-semibold">{to}</p>
             </div>
             <div className="flex justify-center">
               <button
@@ -71,7 +71,7 @@ const AutumnMorningTheme = ({
                 onClick={() => {
                   setIsOpenCover(false);
                 }}
-                className="flex items-center text-center justify-center gap-2 bg-[#AA8B56]/70 w-fit text-white !font-semibold rounded-md py-2 px-4 animate__animated animate__pulse animate__infinite infinite animate__slower"
+                className="flex items-center text-center justify-center gap-2 bg-[#9B39FD]/70 w-fit text-white font-semibold rounded-md py-2 px-4 animate__animated animate__pulse animate__infinite infinite animate__slower"
               >
                 <i className="fa-sharp fa-solid fa-envelope"></i> Buka Undangan
               </button>
@@ -81,76 +81,69 @@ const AutumnMorningTheme = ({
       ) : (
         <main id="main-content">
           <div
-            id="autumn-morning-theme"
+            id="soft-purple-theme"
             className="w-full min-h-screen max-w-screen overflow-x-hidden"
           >
-            <section id="hero" class="h-screen">
+            <section id="hero" className="h-screen">
               <img
-                src="./assets/theme/autumn-morning/autumn-morning-flower-2.webp"
+                src="./assets/theme/soft-purple/flower-1.webp"
                 alt="flower-1"
-                class="absolute h-[200px] w-[200px] lg:h-[300px] lg:w-[300px] -left-16 lg:-left-20 -top-8"
+                className="absolute h-[360px] lg:h-[350px] -top-4 lg:-top-12 -left-28"
                 data-aos="fade-down-right"
               />
-              <div class="h-full text-[#3C2317]" data-aos="zoom-in">
-                <div class="h-full grid place-content-center">
-                  <div class="text-center space-y-8">
-                    <p class="text-2xl lg:text-3xl">The Wedding of</p>
-                    <h1 class="text-5xl lg:text-6xl font-bold">
+              <div className="h-full" data-aos="zoom-in">
+                <div className="h-full grid place-content-center">
+                  <div className="text-center space-y-8">
+                    <p className="text-2xl lg:text-3xl">The Wedding of</p>
+                    <h1 className="text-5xl lg:text-6xl font-bold">
                       {data?.bride_nickname} & {data?.groom_nickname}
                     </h1>
                   </div>
-                  <div class="mt-12 grid grid-cols-3 items-center gap-12 text-xl text-center !font-semibold">
-                    <p>{data?.wedding_date_day}</p>
-                    <div class="text-center space-y-2">
-                      <h3 class="text-4xl">{data.wedding_date_date}</h3>
-                      <p>{data.wedding_date_month}</p>
-                    </div>
-                    <p>{data.wedding_date_year}</p>
+                  <div className="mt-12 flex items-center justify-center gap-12 text-xl text-center font-semibold">
+                    <p>{data?.wedding_date_string}</p>
                   </div>
-                  <div class="flex justify-center mt-8" data-aos="zoom-in">
+                  <div className="flex justify-center mt-4">
                     <img
-                      class="w-[200px] rotate-180"
-                      src="./assets/ornaments/autumn-morning-ornament-branch.webp"
+                      className="w-[200px] lg:w-[300px]"
+                      src="./assets/theme/soft-purple/flower-4.webp"
                       alt="ornament-2"
                     />
                   </div>
                 </div>
+
+                {/* <div id="particles-js"></div> */}
+                <ParticlesSnow />
               </div>
+
               <img
-                src="./assets/theme/autumn-morning/autumn-morning-flower-1.webp"
+                src="./assets/theme/soft-purple/flower-2.webp"
                 alt="flower-1"
-                class="absolute h-[200px] w-[200px] lg:h-[300px] lg:w-[300px] bottom-2 -right-8"
+                className="absolute h-[275px] lg:h-[350px] bottom-2 lg:bottom-8 -right-24"
                 data-aos="fade-up-left"
+              />
+
+              <img
+                className="w-full absolute -bottom-4"
+                src="./assets/theme/soft-purple/wave-bg.png"
+                alt="ornament-2"
+                height={200}
               />
             </section>
 
-            <img
-              src="./assets/theme/autumn-morning/autumn-morning-double-border.webp"
-              alt="section-border"
-              class="w-full h-32 lg:h-full -mt-16 lg:-mt-32 relative object-cover"
-            />
-
-            <section id="couples" class="px-8 mt-12 mb-24 max-lg mx-auto">
-              <div class="flex flex-col items-center gap-2">
-                <Image
-                  class="w-[200px] rotate-180"
-                  src="/assets/ornaments/simple-ornament-2.png"
+            <section id="couples" className="px-8 my-24 max-lg mx-auto">
+              <div className="flex flex-col items-center gap-2">
+                <img
+                  className="w-[200px]"
+                  src="./assets/theme/soft-purple/flower-3.webp"
                   alt="ornament-2"
-                  width={200}
-                  height={80}
                 />
-                <h2 class="text-center text-3xl">We are getting married!</h2>
-                <Image
-                  class="w-[200px]"
-                  src="/assets/ornaments/simple-ornament-2.png"
-                  alt="ornament-2"
-                  width={200}
-                  height={80}
-                />
+                <h2 className="text-center text-3xl">
+                  We are getting married!
+                </h2>
               </div>
-              <div class="flex justify-center">
+              <div className="flex justify-center">
                 <div
-                  class="my-12 text-center space-y-4 w-3/4"
+                  className="my-12 text-center space-y-4 w-3/4"
                   data-aos="zoom-in"
                 >
                   <p>Assalamu’alaikum Warahmatullahi Wabarakatuh</p>
@@ -161,7 +154,7 @@ const AutumnMorningTheme = ({
                   </p>
                 </div>
               </div>
-              <article class="flex items-center flex-col gap-4 lg:flex-row lg:justify-around">
+              <article className="flex items-center flex-col gap-4 lg:flex-row lg:justify-around">
                 <div
                   data-aos="fade-right"
                   className="flex flex-col items-center"
@@ -176,14 +169,24 @@ const AutumnMorningTheme = ({
                       />
                     </figure>
                   </div>
-                  <div class="text-center mt-6 space-y-2">
-                    <h4 class="text-2xl !font-semibold">{data.bride}</h4>
+                  <div className="text-center mt-6 space-y-2">
+                    <h4 className="text-2xl font-semibold">{data?.bride}</h4>
                     <p>
-                      Putri dari Bapak {data.bride_dad} dan Ibu {data.bride_mom}
+                      Putri dari Bapak {data?.bride_dad} dan Ibu{" "}
+                      {data?.bride_mom}
                     </p>
+                    <div className="mt-2">
+                      <a
+                        href={`https://instagram.com/${data?.bride_instagram}`}
+                        target="_blank"
+                      >
+                        <i class="fa-brands fa-instagram"></i>{" "}
+                        {data?.bride_instagram}
+                      </a>
+                    </div>
                   </div>
                 </div>
-                <h5 class="text-9xl text-center">&</h5>
+                <h5 className="text-9xl text-center">&</h5>
                 <div
                   data-aos="fade-left"
                   className="flex flex-col items-center"
@@ -198,11 +201,21 @@ const AutumnMorningTheme = ({
                       />
                     </figure>
                   </div>
-                  <div class="text-center mt-6 space-y-2">
-                    <h4 class="text-2xl !font-semibold">{data.groom}</h4>
+                  <div className="text-center mt-6 space-y-2">
+                    <h4 className="text-2xl font-semibold">{data?.groom}</h4>
                     <p>
-                      Putra dari Bapak {data.groom_dad} dan Ibu {data.groom_mom}
+                      Putra dari Bapak {data?.groom_dad} dan Ibu{" "}
+                      {data?.groom_mom}
                     </p>
+                    <div className="mt-2">
+                      <a
+                        href={`https://instagram.com/${data?.groom_instagram}`}
+                        target="_blank"
+                      >
+                        <i class="fa-brands fa-instagram"></i>{" "}
+                        {data?.groom_instagram}
+                      </a>
+                    </div>
                   </div>
                 </div>
               </article>
@@ -221,7 +234,7 @@ const AutumnMorningTheme = ({
                       </h3>
                       <div className="text-center mb-4">
                         <div className="text-center mb-2">
-                          <h4 className="text-2xl !font-semibold">
+                          <h4 className="text-2xl font-semibold">
                             {event.date_day}
                           </h4>
                           <p>{event.date_month}</p>
@@ -233,7 +246,7 @@ const AutumnMorningTheme = ({
                       </div>
 
                       <div className="text-center">
-                        <p className="text-base !font-semibold">
+                        <p className="text-base font-semibold">
                           {event.location}
                         </p>
                         <p className="text-sm">{event.location_detail}</p>
@@ -245,7 +258,7 @@ const AutumnMorningTheme = ({
 
               <div className="text-center mt-20 flex justify-center">
                 <a
-                  className="flex items-center justify-center gap-2 w-fit bg-[#AA8B56]/70 px-4 py-2 text-white text-sm cursor-pointer rounded-md"
+                  className="flex items-center justify-center gap-2 w-fit bg-[#9B39FD]/70 px-4 py-2 text-white text-sm cursor-pointer rounded-md"
                   href={getGoogleCalendarLink(data)}
                   target="_blank"
                   rel="nofollow"
@@ -259,26 +272,63 @@ const AutumnMorningTheme = ({
             <Countdown date={data?.wedding_date} color="#0e260c" />
             <HealtProtocols />
             <GMapsEmbed embedUrl={data?.events[0].embed_url} />
-            <QuotesSection data={data} />
+
+            <section
+              id="quotes"
+              className="my-24 w-full h-[600px] lg:h-[800px] bg-center bg-fixed bg-cover relative"
+              style={{
+                backgroundImage: `url('${data?.invitation_setup?.quotes_image}')`,
+              }}
+            >
+              <img
+                className="w-full absolute -top-2 rotate-180"
+                src="./assets/theme/soft-purple/wave-bg.png"
+                alt="ornament-2"
+              />
+              <article className="flex items-center w-full h-full text-white bg-[#0b0b0b]/50 px-8 lg:px-20 py-20">
+                <div className="space-y-8 max-lg mx-auto text-center">
+                  <h4
+                    className="text-xl lg:text-3xl leading-[2rem] lg:leading-[4rem]"
+                    data-aos="fade-down"
+                  >
+                    وَمِنْ اٰيٰتِهٖٓ اَنْ خَلَقَ لَكُمْ مِّنْ اَنْفُسِكُمْ
+                    اَزْوَاجًا لِّتَسْكُنُوْٓا اِلَيْهَا وَجَعَلَ بَيْنَكُمْ
+                    مَّوَدَّةً وَّرَحْمَةً ۗاِنَّ فِيْ ذٰلِكَ لَاٰيٰتٍ لِّقَوْمٍ
+                    يَّتَفَكَّرُوْنَ
+                  </h4>
+                  <p
+                    className="text-xs lg:text-base"
+                    data-aos="fade-up"
+                    data-aos-delay="200"
+                  >
+                    "Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia
+                    menciptakan pasangan-pasangan untukmu dari jenismu sendiri,
+                    agar kamu cenderung dan merasa tenteram kepadanya, dan Dia
+                    menjadikan di antaramu rasa kasih dan sayang. Sungguh, pada
+                    yang demikian itu benar-benar terdapat tanda-tanda
+                    (kebesaran Allah) bagi kaum yang berpikir."
+                  </p>
+                  <p data-aos="fade-up" data-aos-delay="200">
+                    Surah Ar Rum Ayat 21
+                  </p>
+                </div>
+              </article>
+              <img
+                className="w-full absolute -bottom-2"
+                src="./assets/theme/soft-purple/wave-bg.png"
+                alt="ornament-2"
+              />
+            </section>
 
             {data?.stories.length && data?.stories?.[0]?.title ? (
               <section id="stories" className="max-lg mx-auto px-8 my-24">
                 <div className="flex flex-col items-center gap-2">
-                  <Image
-                    class="w-[200px] rotate-180"
-                    src="/assets/ornaments/simple-ornament-2.png"
+                  <img
+                    className="w-[200px]"
+                    src="./assets/theme/soft-purple/flower-3.webp"
                     alt="ornament-2"
-                    width={200}
-                    height={80}
                   />
-                  <h2 class="text-center text-3xl">Our Stories</h2>
-                  <Image
-                    class="w-[200px]"
-                    src="/assets/ornaments/simple-ornament-2.png"
-                    alt="ornament-2"
-                    width={200}
-                    height={80}
-                  />
+                  <h2 className="text-center text-3xl">Love Stories</h2>
                 </div>
 
                 <div className="space-y-4 mt-12 w-full lg:w-3/4 mx-auto">
@@ -286,10 +336,10 @@ const AutumnMorningTheme = ({
                     return (
                       <div
                         data-aos="fade-down"
-                        className="bg-[#AA8B56]/10 rounded-lg p-4 shadow-md flex items-start flex-col lg:flex-row gap-4 story-content relative"
+                        className="bg-[#9B39FD]/10 rounded-lg p-4 shadow-md flex items-start flex-col lg:flex-row gap-4 story-content relative"
                       >
                         <div className="flex-1">
-                          <h4 className="!font-semibold text-xl">
+                          <h4 className="font-semibold text-xl">
                             {story.title}
                           </h4>
                           <p className="mt-1 mb-2">{story.date_string}</p>
@@ -304,52 +354,12 @@ const AutumnMorningTheme = ({
               </section>
             ) : null}
 
-            <section id="gallery-container" className="relative">
-              <div
-                id="gallery"
-                className="max-lg mx-auto px-8 mb-24 flex flex-col items-center z-10"
-              >
-                <div className="flex flex-col items-center gap-2 z-20">
-                  <Image
-                    class="w-[200px] rotate-180"
-                    src="/assets/ornaments/simple-ornament-2.png"
-                    alt="ornament-2"
-                    width={200}
-                    height={80}
-                  />
-                  <h2 class="text-center text-3xl">Our Gallery</h2>
-                  <Image
-                    class="w-[200px]"
-                    src="/assets/ornaments/simple-ornament-2.png"
-                    alt="ornament-2"
-                    width={200}
-                    height={80}
-                  />
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 gallery mt-12">
-                  {data?.gallery.map((img) => {
-                    return (
-                      <a
-                        href={img}
-                        className="lg:w-[400px] w-full h-auto lg:h-[400px]"
-                        data-aos="zoom-in"
-                      >
-                        <img
-                          className="object-cover lg:w-[400px] w-full h-auto lg:h-[400px]"
-                          src={img}
-                          alt="gallery-1"
-                        />
-                      </a>
-                    );
-                  })}
-                </div>
-              </div>
-            </section>
+            <GallerySection gallery={data.gallery} />
 
             {data.invitation_setup.rsvp === "on" ? (
               <RSVPSection
-                color="#AA8B56"
-                bottomOrnament="./assets/ornaments/autumn-morning-ornament-branch.webp"
+                color="#9B39FD"
+                topOrnament="./assets/theme/soft-purple/flower-3.webp"
                 username={username}
                 to={to}
                 gid={gid}
@@ -357,16 +367,16 @@ const AutumnMorningTheme = ({
             ) : null}
 
             <WishesSection
-              color="#AA8B56"
+              color="#9B39FD"
               wishes={data?.wishes}
-              bottomOrnament="./assets/ornaments/autumn-morning-ornament-branch.webp"
+              topOrnament="./assets/theme/soft-purple/flower-3.webp"
               username={username}
               to={to}
               refetch={refetchData}
             />
 
             {data?.gift_methods.length ? (
-              <GiftDialog color="#AA8B56" giftMethods={data?.gift_methods} />
+              <GiftDialog color="#9B39FD" giftMethods={data?.gift_methods} />
             ) : null}
 
             <section
@@ -374,17 +384,17 @@ const AutumnMorningTheme = ({
               className="mx-auto px-8 text-center my-24 flex flex-col items-center gap-4 relative"
             >
               <h2 className="text-2xl">Thank you!</h2>
-              <p className="text-4xl !font-semibold">
+              <p className="text-4xl font-semibold">
                 {data?.bride_nickname} & {data?.groom_nickname}
               </p>
               <img
                 className="w-[200px]"
-                src="./assets/ornaments/autumn-morning-ornament-branch.webp"
+                src="./assets/theme/soft-purple/flower-4.webp"
                 alt="ornament-2"
               />
             </section>
 
-            <FooterInvitz />
+            <FooterInvitz color="#9B39FD" />
           </div>
 
           {data?.invitation_setup?.music_url ? (
@@ -396,4 +406,4 @@ const AutumnMorningTheme = ({
   );
 };
 
-export default AutumnMorningTheme;
+export default SoftPurpleTheme;

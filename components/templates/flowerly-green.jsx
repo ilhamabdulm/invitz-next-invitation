@@ -11,9 +11,9 @@ import FooterInvitz from "../sections/footer-invitz";
 import WishesSection from "../sections/wishes";
 import RSVPSection from "../sections/rsvp";
 import GiftDialog from "../sections/gift-dialog";
+import GallerySection from "../sections/gallery";
 
 import { getGoogleCalendarLink } from "../../utils/common";
-import GallerySection from "../sections/gallery";
 
 const FlowerlyGreenTheme = ({
   data,

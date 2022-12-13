@@ -14,6 +14,7 @@ import GiftDialog from "../sections/gift-dialog";
 
 import { getGoogleCalendarLink } from "../../utils/common";
 import QuotesSection from "../sections/quotes";
+import GallerySection from "../sections/gallery";
 
 const AutumnMorningTheme = ({
   data,
@@ -304,47 +305,10 @@ const AutumnMorningTheme = ({
               </section>
             ) : null}
 
-            <section id="gallery-container" className="relative">
-              <div
-                id="gallery"
-                className="max-lg mx-auto px-8 mb-24 flex flex-col items-center z-10"
-              >
-                <div className="flex flex-col items-center gap-2 z-20">
-                  <Image
-                    class="w-[200px] rotate-180"
-                    src="/assets/ornaments/simple-ornament-2.png"
-                    alt="ornament-2"
-                    width={200}
-                    height={80}
-                  />
-                  <h2 class="text-center text-3xl">Our Gallery</h2>
-                  <Image
-                    class="w-[200px]"
-                    src="/assets/ornaments/simple-ornament-2.png"
-                    alt="ornament-2"
-                    width={200}
-                    height={80}
-                  />
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 gallery mt-12">
-                  {data?.gallery.map((img) => {
-                    return (
-                      <a
-                        href={img}
-                        className="lg:w-[400px] w-full h-auto lg:h-[400px]"
-                        data-aos="zoom-in"
-                      >
-                        <img
-                          className="object-cover lg:w-[400px] w-full h-auto lg:h-[400px]"
-                          src={img}
-                          alt="gallery-1"
-                        />
-                      </a>
-                    );
-                  })}
-                </div>
-              </div>
-            </section>
+            <GallerySection
+              gallery={data.gallery}
+              titleBottomOrnament="./assets/ornaments/autumn-morning-ornament-branch.webp"
+            />
 
             {data.invitation_setup.rsvp === "on" ? (
               <RSVPSection

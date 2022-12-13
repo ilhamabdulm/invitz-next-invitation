@@ -354,7 +354,10 @@ const SoftPurpleTheme = ({
               </section>
             ) : null}
 
-            <GallerySection gallery={data.gallery} />
+            <GallerySection
+              gallery={data.gallery}
+              titleTopOrnament="./assets/theme/soft-purple/flower-3.webp"
+            />
 
             {data.invitation_setup.rsvp === "on" ? (
               <RSVPSection

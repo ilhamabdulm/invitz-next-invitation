@@ -1,4 +1,10 @@
-const GallerySection = ({ gallery, leftOrnament, rightOrnament }) => {
+const GallerySection = ({
+  gallery,
+  leftOrnament,
+  rightOrnament,
+  titleTopOrnament,
+  titleBottomOrnament,
+}) => {
   return (
     <section id="gallery-container" className="relative">
       {leftOrnament ? (
@@ -14,12 +20,21 @@ const GallerySection = ({ gallery, leftOrnament, rightOrnament }) => {
         className="max-lg mx-auto px-8 mb-24 flex flex-col items-center z-10"
       >
         <div className="flex flex-col items-center gap-2 z-20">
-          <img
-            className="w-[200px]"
-            src="./assets/theme/soft-purple/flower-3.webp"
-            alt="ornament-2"
-          />
+          {titleTopOrnament ? (
+            <img
+              className="w-[200px]"
+              src={titleTopOrnament}
+              alt="ornament-2"
+            />
+          ) : null}
           <h2 className="text-center text-3xl">Our Gallery</h2>
+          {titleBottomOrnament ? (
+            <img
+              className="w-[200px]"
+              src={titleBottomOrnament}
+              alt="ornament-2"
+            />
+          ) : null}
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 gallery mt-12">
           {gallery.map((img) => {

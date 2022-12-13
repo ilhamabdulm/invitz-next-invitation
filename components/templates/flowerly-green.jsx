@@ -374,6 +374,7 @@ const FlowerlyGreenTheme = ({
             <GallerySection
               gallery={data.gallery}
               leftOrnament={"./assets/theme/flowerly-green/section-left.png"}
+              titleTopOrnament="./assets/theme/flowerly-green/title-border.png"
               rightOrnament={"./assets/theme/flowerly-green/section-right.png"}
             />
 

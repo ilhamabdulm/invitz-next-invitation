@@ -18,7 +18,7 @@ export default function Home({ data, username }) {
   const { query } = useRouter();
   const { to, gid } = query;
 
-  const ThemeComponent = themes["simple-white"];
+  const ThemeComponent = themes[data.selected_theme];
 
   return (
     <div

@@ -86,7 +86,7 @@ const WishesSection = ({
             .map((wish) => {
               return (
                 <li>
-                  <div className="bg-white rounded-md shadow-lg p-4">
+                  <div className="bg-white text-black rounded-md shadow-lg p-4">
                     <h4 className="text-lg font-semibold">{wish.name}</h4>
                     <p className="text-xs mt-1 mb-3">{wish.date_string}</p>
                     <p className="text-sm">{wish.wishes}</p>

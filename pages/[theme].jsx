@@ -4,9 +4,9 @@ import { themes } from "../utils/themes";
 
 export default function Home({ data, username }) {
   const { query } = useRouter();
-  const { to, gid } = query;
+  const { to, gid, theme } = query;
 
-  const ThemeComponent = themes[data.data.selected_theme];
+  const ThemeComponent = themes[theme];
 
   return (
     <div
@@ -70,7 +70,7 @@ export async function getServerSideProps(context) {
   const host = req.headers.host;
   let username = "";
   if (host.includes("localhost")) {
-    username = "testingsatu";
+    username = "lulitabutirosyad";
   } else {
     const splited = host.split(".")[0];
     console.log("splited");

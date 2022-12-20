@@ -1,4 +1,4 @@
-const QuotesSection = ({ data }) => {
+const QuotesSection = ({ data, waveBg }) => {
   return (
     <section
       id="quotes"
@@ -9,6 +9,13 @@ const QuotesSection = ({ data }) => {
           : "",
       }}
     >
+      {waveBg ? (
+        <img
+          className="w-full absolute -top-2 rotate-180"
+          src={waveBg}
+          alt="ornament-2"
+        />
+      ) : null}
       <article className="flex items-center w-full h-full text-white bg-[#0b0b0b]/50 px-8 lg:px-20 py-20">
         <div className="space-y-8 max-lg mx-auto text-center">
           <h4
@@ -35,6 +42,13 @@ const QuotesSection = ({ data }) => {
           </p>
         </div>
       </article>
+      {waveBg ? (
+        <img
+          className="w-full absolute -bottom-2"
+          src={waveBg}
+          alt="ornament-2"
+        />
+      ) : null}
     </section>
   );
 };

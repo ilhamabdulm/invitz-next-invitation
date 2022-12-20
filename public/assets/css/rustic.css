@@ -1,13 +1,13 @@
-@import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Parisienne&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap");
+
 body {
   font-family: "Poppins", sans-serif;
   /* background-color: #e9f4fd; */
   background-position: center;
-  background-size: 150%;
   /* background-repeat: no-repeat; */
-  background-color: #FFF8EA;
-  color: #3c2317;
+  background-color: #9ba17b;
+  color: #fefefe;
   overflow-x: hidden;
 }
 
@@ -15,21 +15,9 @@ body {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  /* background-image: url("../theme/rustic/background-hero.png"); */
   height: 100vh;
-  background-image: url("../theme/autumn-morning/autumn-hero-bg.webp");
   position: relative;
-}
-
-#countdown::after {
-  content: "";
-  background: url("../theme/autumn-morning/autumn-morning-brush-large.webp");
-  width: 100%;
-  height: 400px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  position: absolute;
-  top: -7rem;
-  transform: rotate(180deg);
 }
 
 h1,
@@ -38,22 +26,35 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Courgette", cursive;
+  font-family: "Parisienne", cursive;
 }
 
 .couple-photo {
-  background-image: url("../theme/autumn-morning/border-autumn-morning.webp");
+  background-image: url("../theme/rustic/border-photo-2.webp");
   border-radius: 50%;
-  width: 320px;
-  height: 320px;
-  background-position: center;
-  background-size: contain;
+  width: 350px;
+  height: 350px;
+  background-position: 15% 50%;
+  background-size: 100%;
   object-position: center;
   background-repeat: no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-clip: content-box;
   overflow: hidden;
+}
+
+.couple-photo > img {
+  width: 100%;
+  height: 100%;
+}
+
+#gallery-container {
+  /* background-image: url("../theme/rustic/gallery-bg.webp");
+  background-position: 50% 50%;
+  background-size: 60%;
+  background-repeat: no-repeat; */
 }
 
 @media only screen and (max-width: 724px) {

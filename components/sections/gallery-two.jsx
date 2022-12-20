@@ -1,4 +1,4 @@
-const GallerySection = ({
+const GalleryTwoSection = ({
   gallery,
   leftOrnament,
   rightOrnament,
@@ -36,23 +36,48 @@ const GallerySection = ({
             />
           ) : null}
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-8 gallery mt-12">
+        <figure className="w-auto h-full relative overflow-y-auto mt-12 flex items-center justify-center gallery">
+          <img
+            className="w-full h-full absolute top-0"
+            src="./assets/theme/rustic/gallery-bg.webp"
+            alt="bg-gallery"
+          />
+
+          <div className="!z-30 relative grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-8 py-28 lg:py-20 px-6 lg:px-8">
+            {gallery.map((img) => {
+              return (
+                <a
+                  href={img}
+                  className="lg:w-[400px] w-full h-auto lg:h-auto"
+                  data-aos="zoom-in"
+                >
+                  <img
+                    className="object-cover lg:w-[400px] w-full h-auto lg:h-auto"
+                    src={img}
+                    alt="gallery-1"
+                  />
+                </a>
+              );
+            })}
+          </div>
+        </figure>
+        {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6 gallery mt-12">
           {gallery.map((img) => {
             return (
               <a
                 href={img}
-                className="lg:w-[400px] w-full h-auto lg:h-[400px]"
+                className="lg:w-[300px] w-full h-auto lg:h-[300px]"
                 data-aos="zoom-in"
               >
                 <img
-                  className="object-cover lg:w-[400px] w-full h-auto lg:h-[400px]"
+                  className="object-cover lg:w-[300px] w-full h-auto lg:h-[300px]"
                   src={img}
                   alt="gallery-1"
                 />
               </a>
             );
           })}
-        </div>
+        </div> */}
       </div>
       {rightOrnament ? (
         <img
@@ -66,4 +91,4 @@ const GallerySection = ({
   );
 };
 
-export default GallerySection;
+export default GalleryTwoSection;

@@ -63,7 +63,7 @@ const RSVPSection = ({
                 name="name"
                 id="name"
                 placeholder="Masukkan Nama Kamu"
-                className={`px-3 py-2 w-full rounded-md focus:outline-[${color}] border border-slate-200`}
+                className={`px-3 py-2 w-full rounded-md focus:outline-[${color}] border border-slate-200 text-black`}
                 value={state.name}
                 onChange={handleFormChange}
               />
@@ -75,7 +75,7 @@ const RSVPSection = ({
                 name="address"
                 id="address"
                 placeholder="Masukkan Alamat Kamu"
-                className={`px-3 py-2 w-full rounded-md focus:outline-[${color}] border border-slate-200`}
+                className={`px-3 py-2 w-full rounded-md focus:outline-[${color}] border border-slate-200 text-black`}
                 value={state.address}
                 onChange={handleFormChange}
               />
@@ -87,7 +87,7 @@ const RSVPSection = ({
                 name="attendance"
                 id="attendance"
                 placeholder="Pilih jumlah tamu"
-                className={`px-3 py-2 w-full rounded-md focus:outline-[${color}] border border-slate-200`}
+                className={`px-3 py-2 w-full rounded-md focus:outline-[${color}] border border-slate-200 text-black`}
                 value={state.attendance}
                 onChange={handleFormChange}
               >
@@ -104,7 +104,7 @@ const RSVPSection = ({
                 name="total_guest"
                 id="total_guest"
                 placeholder="Pilih jumlah tamu"
-                className={`px-3 py-2 w-full rounded-md focus:outline-[${color}] border border-slate-200`}
+                className={`px-3 py-2 w-full rounded-md focus:outline-[${color}] border border-slate-200 text-black`}
                 value={state.total_guest}
                 onChange={handleFormChange}
               >

@@ -48,11 +48,11 @@ const GalleryTwoSection = ({
               return (
                 <a
                   href={img}
-                  className="lg:w-[400px] w-full h-auto lg:h-auto"
+                  className="lg:w-[400px] w-full h-auto lg:h-[400px]"
                   data-aos="zoom-in"
                 >
                   <img
-                    className="object-cover lg:w-[400px] w-full h-auto lg:h-auto"
+                    className="object-cover lg:w-[400px] w-full h-auto lg:h-[400px]"
                     src={img}
                     alt="gallery-1"
                   />

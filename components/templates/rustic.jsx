@@ -51,7 +51,7 @@ const RusticTheme = ({ data, username, refetchData = () => {}, to, gid }) => {
         >
           <div
             data-aos="zoom-in"
-            className="grid place-content-center text-center bg-white/90 w-full h-[400px] lg:w-[600px] rounded-lg p-6 space-y-6 animate__fadeIn"
+            className="grid place-content-center text-center bg-white/90 w-full h-[400px] lg:w-[600px] rounded-lg p-6 space-y-6 animate__fadeIn text-slate-800"
           >
             <p>You are Invited!</p>
             <h1 className="text-3xl font-semibold">

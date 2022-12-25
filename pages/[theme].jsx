@@ -8,7 +8,7 @@ export default function Home({ data, username }) {
 
   const ThemeComponent = themes[theme];
 
-  return (
+  return username === "demo" ? (
     <div
       onContextMenu={(e) => {
         e.preventDefault();
@@ -62,15 +62,17 @@ export default function Home({ data, username }) {
         refetchData={() => window.location.reload()}
       />
     </div>
+  ) : (
+    <div>Not Found</div>
   );
 }
 
 export async function getServerSideProps(context) {
   const { req } = context;
   const host = req.headers.host;
-  let username = "";
+  let username = "demo";
   if (host.includes("localhost")) {
-    username = "lulitabutirosyad";
+    username = "demo";
   } else {
     const splited = host.split(".")[0];
     console.log("splited");
@@ -80,11 +82,10 @@ export async function getServerSideProps(context) {
     `https://api.invitz.me/api/v1/invitation/username/${username}`
   );
   const json = await response.json();
-  console.log({ json });
 
   return {
     props: {
-      data: json,
+      data: username === "demo" ? json : {},
       username,
     },
   };

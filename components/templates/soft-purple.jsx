@@ -88,14 +88,14 @@ const SoftPurpleTheme = ({
               <img
                 src="./assets/theme/soft-purple/flower-1.webp"
                 alt="flower-1"
-                className="absolute h-[360px] lg:h-[350px] -top-4 lg:-top-12 -left-28"
+                className="absolute h-[250px] lg:h-[350px] -top-4 lg:-top-12 -left-28"
                 data-aos="fade-down-right"
               />
               <div className="h-full" data-aos="zoom-in">
-                <div className="h-full grid place-content-center">
+                <div className="h-full grid place-content-center px-2">
                   <div className="text-center space-y-8">
                     <p className="text-2xl lg:text-3xl">The Wedding of</p>
-                    <h1 className="text-5xl lg:text-6xl font-bold">
+                    <h1 className="text-4xl lg:text-6xl font-bold">
                       {data?.bride_nickname} & {data?.groom_nickname}
                     </h1>
                   </div>
@@ -118,7 +118,7 @@ const SoftPurpleTheme = ({
               <img
                 src="./assets/theme/soft-purple/flower-2.webp"
                 alt="flower-1"
-                className="absolute h-[275px] lg:h-[350px] bottom-2 lg:bottom-8 -right-24"
+                className="absolute h-[225px] lg:h-[350px] bottom-2 lg:bottom-8 -right-24"
                 data-aos="fade-up-left"
               />
 

@@ -92,10 +92,10 @@ const FlowerlyGreenTheme = ({
                 data-aos="fade-down-right"
               />
               <div className="h-full" data-aos="zoom-in">
-                <div className="h-full grid place-content-center">
+                <div className="h-full grid place-content-center px-2">
                   <div className="text-center space-y-8">
                     <p className="text-2xl lg:text-3xl">The Wedding of</p>
-                    <h1 className="text-5xl lg:text-6xl font-bold">
+                    <h1 className="text-4xl lg:text-6xl font-bold">
                       {data?.bride_nickname} & {data?.groom_nickname}
                     </h1>
                   </div>

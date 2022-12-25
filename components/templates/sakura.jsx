@@ -11,11 +11,13 @@ import FooterInvitz from "../sections/footer-invitz";
 import WishesSection from "../sections/wishes";
 import RSVPSection from "../sections/rsvp";
 import GiftDialog from "../sections/gift-dialog";
-import QuotesSection from "../sections/quotes";
+import GallerySection from "../sections/gallery";
 
 import { getGoogleCalendarLink } from "../../utils/common";
+import QuotesSection from "../sections/quotes";
+import GalleryTwoSection from "../sections/gallery-two";
 
-const CalmBlueTheme = ({ data, username, refetchData = () => {}, to, gid }) => {
+const SakuraTheme = ({ data, username, refetchData = () => {}, to, gid }) => {
   const [isOpenCover, setIsOpenCover] = useState(true);
 
   let mounted = false;
@@ -40,7 +42,7 @@ const CalmBlueTheme = ({ data, username, refetchData = () => {}, to, gid }) => {
   return (
     <>
       <Head>
-        <link rel="stylesheet" href="./assets/css/calm-blue.css" />
+        <link rel="stylesheet" href="./assets/css/sakura.css" />
       </Head>
       {isOpenCover && to ? (
         <div
@@ -52,12 +54,12 @@ const CalmBlueTheme = ({ data, username, refetchData = () => {}, to, gid }) => {
             className="grid place-content-center text-center bg-white/90 w-full h-[400px] lg:w-[600px] rounded-lg p-6 space-y-6 animate__fadeIn"
           >
             <p>You are Invited!</p>
-            <h1 className="text-3xl !font-semibold">
+            <h1 className="text-3xl font-semibold">
               Hi, we are getting married!
             </h1>
             <div>
               <p>Kepada Yth,</p>
-              <p className="text-lg !font-semibold">{to}</p>
+              <p className="text-lg font-semibold">{to}</p>
             </div>
             <div className="flex justify-center">
               <button
@@ -65,7 +67,7 @@ const CalmBlueTheme = ({ data, username, refetchData = () => {}, to, gid }) => {
                 onClick={() => {
                   setIsOpenCover(false);
                 }}
-                className="flex items-center text-center justify-center gap-2 bg-[#006DED]/70 w-fit text-white !font-semibold rounded-md py-2 px-4 animate__animated animate__pulse animate__infinite infinite animate__slower"
+                className="flex items-center text-center justify-center gap-2 bg-[#FF9494]/70 w-fit text-white font-semibold rounded-md py-2 px-4 animate__animated animate__pulse animate__infinite infinite animate__slower"
               >
                 <i className="fa-sharp fa-solid fa-envelope"></i> Buka Undangan
               </button>
@@ -75,62 +77,68 @@ const CalmBlueTheme = ({ data, username, refetchData = () => {}, to, gid }) => {
       ) : (
         <main id="main-content">
           <div
-            id="calm-blue-theme"
+            id="sakura-theme"
             className="w-full min-h-screen max-w-screen overflow-x-hidden"
           >
-            <section
-              id="hero"
-              class="h-screen"
-              style={{
-                backgroundImage: data.invitation_setup.hero_image
-                  ? `url(${data.invitation_setup.hero_image})`
-                  : "url('./assets/bg-wedding-1.webp')",
-              }}
-            >
-              <div
-                class="h-full text-[#3C2317] bg-blue-800/20 grid place-content-center "
-                data-aos="zoom-in"
-              >
-                <div class="py-12 px-24 rounded-lg bg-blue-800/30 text-white">
-                  <div class="text-center space-y-8">
-                    <p class="text-2xl lg:text-3xl">The Wedding of</p>
-                    <h1 class="text-4xl lg:text-6xl font-bold">
+            <section id="hero" className="h-screen">
+              <img
+                src="./assets/theme/sakura/hero-left.webp"
+                alt="flower-1"
+                className="absolute h-[200px] lg:h-[300px] -top-12 lg:-top-24 -left-20"
+                data-aos="fade-down-right"
+              />
+              <div className="h-full" data-aos="zoom-in">
+                <div className="h-full grid place-content-center px-2">
+                  <div className="text-center space-y-8">
+                    <p className="text-2xl lg:text-3xl">The Wedding of</p>
+                    <h1 className="text-4xl lg:text-6xl font-bold">
                       {data?.bride_nickname} & {data?.groom_nickname}
                     </h1>
                   </div>
-                  <div class="mt-12 grid grid-cols-3 items-center gap-12 text-xl text-center !font-semibold">
-                    <p>{data?.wedding_date_day}</p>
-                    <div class="text-center space-y-2">
-                      <h3 class="text-4xl">{data.wedding_date_date}</h3>
-                      <p>{data.wedding_date_month}</p>
-                    </div>
-                    <p>{data.wedding_date_year}</p>
+                  <div className="mt-12 flex items-center justify-center gap-12 lg:text-xl text-center font-semibold">
+                    <p>{data?.wedding_date_string}</p>
+                  </div>
+                  <div className="flex justify-center mt-4">
+                    <img
+                      className="w-[200px] lg:w-[300px]"
+                      src="./assets/theme/sakura/text-bottom.webp"
+                      alt="ornament-2"
+                    />
                   </div>
                 </div>
+
+                {/* <div id="particles-js"></div> */}
+                <ParticlesSnow />
               </div>
+
+              <img
+                src="./assets/theme/sakura/hero-right.webp"
+                alt="flower-1"
+                className="absolute h-[250px] lg:h-[300px] -bottom-4 lg:bottom-0 -right-20"
+                data-aos="fade-up-left"
+              />
+
+              <img
+                className="w-full absolute -bottom-2"
+                src="./assets/theme/sakura/wave-bg.webp"
+                alt="ornament-2"
+              />
             </section>
 
-            <section id="couples" class="px-8 mt-12 mb-24 max-lg mx-auto">
-              <div class="flex flex-col items-center gap-2">
-                <Image
-                  class="w-[200px] rotate-180"
-                  src="/assets/ornaments/simple-ornament-2.png"
+            <section id="couples" className="px-8 my-24 max-lg mx-auto">
+              <div className="flex flex-col items-center gap-2">
+                <img
+                  className="w-[200px]"
+                  src="./assets/theme/sakura/title-border.webp"
                   alt="ornament-2"
-                  width={200}
-                  height={80}
                 />
-                <h2 class="text-center text-3xl">We are getting married!</h2>
-                <Image
-                  class="w-[200px]"
-                  src="/assets/ornaments/simple-ornament-2.png"
-                  alt="ornament-2"
-                  width={200}
-                  height={80}
-                />
+                <h2 className="text-center text-3xl">
+                  We are getting married!
+                </h2>
               </div>
-              <div class="flex justify-center">
+              <div className="flex justify-center">
                 <div
-                  class="my-12 text-center space-y-4 w-3/4"
+                  className="my-12 text-center space-y-4 w-3/4"
                   data-aos="zoom-in"
                 >
                   <p>Assalamu’alaikum Warahmatullahi Wabarakatuh</p>
@@ -141,48 +149,68 @@ const CalmBlueTheme = ({ data, username, refetchData = () => {}, to, gid }) => {
                   </p>
                 </div>
               </div>
-              <article class="flex items-center flex-col gap-4 lg:flex-row lg:justify-around">
+              <article className="flex items-center flex-col gap-4 lg:flex-row lg:justify-around">
                 <div
                   data-aos="fade-right"
                   className="flex flex-col items-center"
                 >
                   <div className="couple-photo">
-                    <figure className="relative w-[270px] h-[270px] flex items-center justify-center">
+                    <figure className="relative w-[270px] h-[270px] left-4">
                       <Image
-                        className="rounded-md -z-10 object-cover"
+                        className="rounded-full -z-10 object-cover"
                         src={data?.bride_photo}
                         alt="bride-photo"
                         fill
                       />
                     </figure>
                   </div>
-                  <div class="text-center mt-6 space-y-2">
-                    <h4 class="text-2xl !font-semibold">{data.bride}</h4>
+                  <div className="text-center mt-6 space-y-2">
+                    <h4 className="text-2xl font-semibold">{data?.bride}</h4>
                     <p>
-                      Putri dari Bapak {data.bride_dad} dan Ibu {data.bride_mom}
+                      Putri dari Bapak {data?.bride_dad} dan Ibu{" "}
+                      {data?.bride_mom}
                     </p>
+                    <div className="mt-2">
+                      <a
+                        href={`https://instagram.com/${data?.bride_instagram}`}
+                        target="_blank"
+                      >
+                        <i class="fa-brands fa-instagram"></i>{" "}
+                        {data?.bride_instagram}
+                      </a>
+                    </div>
                   </div>
                 </div>
-                <h5 class="text-9xl text-center">&</h5>
+                <h5 className="text-9xl text-center">&</h5>
                 <div
                   data-aos="fade-left"
                   className="flex flex-col items-center"
                 >
                   <div className="couple-photo">
-                    <figure className="relative w-[270px] h-[270px] flex items-center justify-center">
+                    <figure className="relative w-[270px] h-[270px] left-4">
                       <Image
-                        className="rounded-md -z-10 object-cover"
+                        className="rounded-full -z-10 object-cover"
                         src={data?.groom_photo}
                         alt="groom-photo"
                         fill
                       />
                     </figure>
                   </div>
-                  <div class="text-center mt-6 space-y-2">
-                    <h4 class="text-2xl !font-semibold">{data.groom}</h4>
+                  <div className="text-center mt-6 space-y-2">
+                    <h4 className="text-2xl font-semibold">{data?.groom}</h4>
                     <p>
-                      Putra dari Bapak {data.groom_dad} dan Ibu {data.groom_mom}
+                      Putra dari Bapak {data?.groom_dad} dan Ibu{" "}
+                      {data?.groom_mom}
                     </p>
+                    <div className="mt-2">
+                      <a
+                        href={`https://instagram.com/${data?.groom_instagram}`}
+                        target="_blank"
+                      >
+                        <i class="fa-brands fa-instagram"></i>{" "}
+                        {data?.groom_instagram}
+                      </a>
+                    </div>
                   </div>
                 </div>
               </article>
@@ -201,7 +229,7 @@ const CalmBlueTheme = ({ data, username, refetchData = () => {}, to, gid }) => {
                       </h3>
                       <div className="text-center mb-4">
                         <div className="text-center mb-2">
-                          <h4 className="text-2xl !font-semibold">
+                          <h4 className="text-2xl font-semibold">
                             {event.date_day}
                           </h4>
                           <p>{event.date_month}</p>
@@ -213,7 +241,7 @@ const CalmBlueTheme = ({ data, username, refetchData = () => {}, to, gid }) => {
                       </div>
 
                       <div className="text-center">
-                        <p className="text-base !font-semibold">
+                        <p className="text-base font-semibold">
                           {event.location}
                         </p>
                         <p className="text-sm">{event.location_detail}</p>
@@ -225,7 +253,7 @@ const CalmBlueTheme = ({ data, username, refetchData = () => {}, to, gid }) => {
 
               <div className="text-center mt-20 flex justify-center">
                 <a
-                  className="flex items-center justify-center gap-2 w-fit bg-[#006DED]/70 px-4 py-2 text-white text-sm cursor-pointer rounded-md"
+                  className="flex items-center justify-center gap-2 w-fit bg-[#FF9494]/70 px-4 py-2 text-white text-sm cursor-pointer rounded-md"
                   href={getGoogleCalendarLink(data)}
                   target="_blank"
                   rel="nofollow"
@@ -236,29 +264,23 @@ const CalmBlueTheme = ({ data, username, refetchData = () => {}, to, gid }) => {
               </div>
             </section>
 
-            <Countdown date={data?.wedding_date} color="#0e260c" />
+            <Countdown date={data?.wedding_date} color="#35391D" />
             <HealtProtocols />
             <GMapsEmbed embedUrl={data?.events[0].embed_url} />
-            <QuotesSection data={data} />
+            <QuotesSection
+              data={data}
+              waveBg="./assets/theme/sakura/wave-bg.webp"
+            />
 
             {data?.stories.length && data?.stories?.[0]?.title ? (
               <section id="stories" className="max-lg mx-auto px-8 my-24">
                 <div className="flex flex-col items-center gap-2">
-                  <Image
-                    class="w-[200px] rotate-180"
-                    src="/assets/ornaments/simple-ornament-2.png"
+                  <img
+                    className="w-[200px]"
+                    src="./assets/theme/sakura/title-border.webp"
                     alt="ornament-2"
-                    width={200}
-                    height={80}
                   />
-                  <h2 class="text-center text-3xl">Our Stories</h2>
-                  <Image
-                    class="w-[200px]"
-                    src="/assets/ornaments/simple-ornament-2.png"
-                    alt="ornament-2"
-                    width={200}
-                    height={80}
-                  />
+                  <h2 className="text-center text-3xl">Love Stories</h2>
                 </div>
 
                 <div className="space-y-4 mt-12 w-full lg:w-3/4 mx-auto">
@@ -266,10 +288,10 @@ const CalmBlueTheme = ({ data, username, refetchData = () => {}, to, gid }) => {
                     return (
                       <div
                         data-aos="fade-down"
-                        className="bg-[#006DED]/10 rounded-lg p-4 shadow-md flex items-start flex-col lg:flex-row gap-4 story-content relative"
+                        className="bg-[#FF9494]/10 rounded-lg p-4 shadow-md flex items-start flex-col lg:flex-row gap-4 story-content relative"
                       >
                         <div className="flex-1">
-                          <h4 className="!font-semibold text-xl">
+                          <h4 className="font-semibold text-xl">
                             {story.title}
                           </h4>
                           <p className="mt-1 mb-2">{story.date_string}</p>
@@ -284,52 +306,17 @@ const CalmBlueTheme = ({ data, username, refetchData = () => {}, to, gid }) => {
               </section>
             ) : null}
 
-            <section id="gallery-container" className="relative">
-              <div
-                id="gallery"
-                className="max-lg mx-auto px-8 mb-24 flex flex-col items-center z-10"
-              >
-                <div className="flex flex-col items-center gap-2 z-20">
-                  <Image
-                    class="w-[200px] rotate-180"
-                    src="/assets/ornaments/simple-ornament-2.png"
-                    alt="ornament-2"
-                    width={200}
-                    height={80}
-                  />
-                  <h2 class="text-center text-3xl">Our Gallery</h2>
-                  <Image
-                    class="w-[200px]"
-                    src="/assets/ornaments/simple-ornament-2.png"
-                    alt="ornament-2"
-                    width={200}
-                    height={80}
-                  />
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 gallery mt-12">
-                  {data?.gallery.map((img) => {
-                    return (
-                      <a
-                        href={img}
-                        className="lg:w-[400px] w-full h-auto lg:h-[400px]"
-                        data-aos="zoom-in"
-                      >
-                        <img
-                          className="object-cover lg:w-[400px] w-full h-auto lg:h-[400px]"
-                          src={img}
-                          alt="gallery-1"
-                        />
-                      </a>
-                    );
-                  })}
-                </div>
-              </div>
-            </section>
+            <GallerySection
+              gallery={data.gallery}
+              titleTopOrnament="./assets/theme/sakura/title-border.webp"
+              rightOrnament="./assets/theme/sakura/gallery-bg-1.webp"
+              leftOrnament="./assets/theme/sakura/gallery-bg-2.webp"
+            />
 
             {data.invitation_setup.rsvp === "on" ? (
               <RSVPSection
-                color="#006DED"
-                bottomOrnament="/assets/ornaments/simple-ornament-2.png"
+                color="#FF9494"
+                topOrnament="./assets/theme/sakura/title-border.webp"
                 username={username}
                 to={to}
                 gid={gid}
@@ -337,16 +324,16 @@ const CalmBlueTheme = ({ data, username, refetchData = () => {}, to, gid }) => {
             ) : null}
 
             <WishesSection
-              color="#006DED"
+              color="#FF9494"
               wishes={data?.wishes}
-              bottomOrnament="/assets/ornaments/simple-ornament-2.png"
+              topOrnament="./assets/theme/sakura/title-border.webp"
               username={username}
               to={to}
               refetch={refetchData}
             />
 
             {data?.gift_methods.length ? (
-              <GiftDialog color="#006DED" giftMethods={data?.gift_methods} />
+              <GiftDialog color="#FF9494" giftMethods={data?.gift_methods} />
             ) : null}
 
             <section
@@ -354,12 +341,12 @@ const CalmBlueTheme = ({ data, username, refetchData = () => {}, to, gid }) => {
               className="mx-auto px-8 text-center my-24 flex flex-col items-center gap-4 relative"
             >
               <h2 className="text-2xl">Thank you!</h2>
-              <p className="text-4xl !font-semibold">
+              <p className="text-4xl font-semibold">
                 {data?.bride_nickname} & {data?.groom_nickname}
               </p>
               <img
-                className="w-[200px]"
-                src="/assets/ornaments/simple-ornament-2.png"
+                className="w-[300px]"
+                src="./assets/theme/sakura/bottom-thank.webp"
                 alt="ornament-2"
               />
             </section>
@@ -376,4 +363,4 @@ const CalmBlueTheme = ({ data, username, refetchData = () => {}, to, gid }) => {
   );
 };
 
-export default CalmBlueTheme;
+export default SakuraTheme;

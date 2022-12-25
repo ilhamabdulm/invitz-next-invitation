@@ -8,7 +8,7 @@ export default function Home({ data, username }) {
 
   const ThemeComponent = themes[data.data.selected_theme];
 
-  return (
+  return username !== "demo" ? (
     <div
       onContextMenu={(e) => {
         e.preventDefault();
@@ -62,6 +62,8 @@ export default function Home({ data, username }) {
         refetchData={() => window.location.reload()}
       />
     </div>
+  ) : (
+    <div>Not Found</div>
   );
 }
 

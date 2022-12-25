@@ -86,10 +86,10 @@ const SimpleWhiteTheme = ({
           >
             <section id="hero" class="h-screen">
               <div class="h-full text-[#3C2317]" data-aos="zoom-in">
-                <div class="h-full grid place-content-center">
+                <div class="h-full grid place-content-center px-2">
                   <div class="text-center space-y-8">
                     <p class="text-2xl lg:text-3xl">The Wedding of</p>
-                    <h1 class="text-5xl lg:text-6xl font-bold">
+                    <h1 class="text-4xl lg:text-6xl font-bold">
                       {data?.bride_nickname} & {data?.groom_nickname}
                     </h1>
                   </div>

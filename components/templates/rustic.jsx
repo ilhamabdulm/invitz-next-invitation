@@ -81,45 +81,45 @@ const RusticTheme = ({ data, username, refetchData = () => {}, to, gid }) => {
             className="w-full min-h-screen max-w-screen overflow-x-hidden"
           >
             <section id="hero" className="h-screen">
-              <img
+              {/* <img
                 src="./assets/theme/rustic/hero-left.webp"
                 alt="flower-1"
                 className="absolute h-[300px] lg:h-[500px] -top-12 lg:-top-24 -left-20"
                 data-aos="fade-down-right"
-              />
+              /> */}
               <div className="h-full" data-aos="zoom-in">
-                <div className="h-full grid place-content-center">
+                <div className="h-full grid place-content-center px-2 lg:pb-32">
                   <div className="text-center space-y-8">
                     <p className="text-2xl lg:text-3xl">The Wedding of</p>
-                    <h1 className="text-5xl lg:text-6xl font-bold">
+                    <h1 className="text-4xl lg:text-6xl font-bold">
                       {data?.bride_nickname} & {data?.groom_nickname}
                     </h1>
                   </div>
                   <div className="mt-12 flex items-center justify-center gap-12 text-xl text-center font-semibold">
                     <p>{data?.wedding_date_string}</p>
                   </div>
-                  <div className="flex justify-center mt-4">
+                  {/* <div className="flex justify-center mt-4">
                     <img
                       className="w-[200px] lg:w-[300px]"
                       src="./assets/theme/rustic/text-bottom.webp"
                       alt="ornament-2"
                     />
-                  </div>
+                  </div> */}
                 </div>
+
+                <img
+                  src="./assets/theme/rustic/hero-element.webp"
+                  alt="flower-1"
+                  className="absolute -bottom-2 h-[250px] lg:h-[500px] w-screen"
+                  data-aos="fade-up"
+                />
 
                 {/* <div id="particles-js"></div> */}
                 <ParticlesSnow />
               </div>
 
               <img
-                src="./assets/theme/rustic/hero-right.webp"
-                alt="flower-1"
-                className="absolute h-[275px] lg:h-[450px] -bottom-4 lg:bottom-0 -right-20"
-                data-aos="fade-up-left"
-              />
-
-              <img
-                className="w-full absolute -bottom-2"
+                className="w-full h-16 lg:h-24 absolute -bottom-2"
                 src="./assets/theme/rustic/wave-bg.webp"
                 alt="ornament-2"
               />
@@ -154,13 +154,23 @@ const RusticTheme = ({ data, username, refetchData = () => {}, to, gid }) => {
                   data-aos="fade-right"
                   className="flex flex-col items-center"
                 >
-                  <div className="couple-photo">
-                    <figure className="relative w-[270px] h-[270px] left-4">
+                  <div className="">
+                    <figure className="relative w-[280px] h-[315px] left-4">
+                      <img
+                        className="absolute h-[315px] -bottom-6 -left-28 z-10"
+                        src="./assets/theme/rustic/border-photo-1.webp"
+                        alt="border-1"
+                      />
                       <Image
-                        className="rounded-full -z-10 object-cover"
+                        className="rounded-t-full z-20 object-cover"
                         src={data?.bride_photo}
                         alt="bride-photo"
                         fill
+                      />
+                      <img
+                        className="absolute h-[250px] bottom-0 -right-16 z-10"
+                        src="./assets/theme/rustic/border-photo-3.webp"
+                        alt="border-2"
                       />
                     </figure>
                   </div>
@@ -186,13 +196,24 @@ const RusticTheme = ({ data, username, refetchData = () => {}, to, gid }) => {
                   data-aos="fade-left"
                   className="flex flex-col items-center"
                 >
-                  <div className="couple-photo">
-                    <figure className="relative w-[270px] h-[270px] left-4">
+                  <div className="">
+                    <figure className="relative w-[280px] h-[315px] left-4">
+                      {" "}
+                      <img
+                        className="absolute h-[315px] -bottom-6 -left-28 z-10"
+                        src="./assets/theme/rustic/border-photo-1.webp"
+                        alt="border-1"
+                      />
                       <Image
-                        className="rounded-full -z-10 object-cover"
+                        className="rounded-t-full z-20 object-cover"
                         src={data?.groom_photo}
                         alt="groom-photo"
                         fill
+                      />
+                      <img
+                        className="absolute h-[250px] bottom-0 -right-16 z-10"
+                        src="./assets/theme/rustic/border-photo-3.webp"
+                        alt="border-2"
                       />
                     </figure>
                   </div>
@@ -343,8 +364,8 @@ const RusticTheme = ({ data, username, refetchData = () => {}, to, gid }) => {
                 {data?.bride_nickname} & {data?.groom_nickname}
               </p>
               <img
-                className="w-[200px]"
-                src="./assets/theme/rustic/text-bottom.webp"
+                className="w-[300px]"
+                src="./assets/theme/rustic/bottom-thank.webp"
                 alt="ornament-2"
               />
             </section>

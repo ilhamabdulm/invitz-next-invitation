@@ -6,8 +6,8 @@ body {
   /* background-color: #e9f4fd; */
   background-position: center;
   /* background-repeat: no-repeat; */
-  background-color: #9ba17b;
-  color: #fefefe;
+  background-color: #FFF5E4;
+  color: #0b0b0b;
   overflow-x: hidden;
 }
 
@@ -15,7 +15,7 @@ body {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url("../theme/rustic/background-hero.webp");
+  background-image: url("../theme/sakura/background-hero.webp");
   height: 100vh;
   position: relative;
 }
@@ -30,7 +30,7 @@ h6 {
 }
 
 .couple-photo {
-  background-image: url("../theme/rustic/border-photo-2.webp");
+  background-image: url("../theme/sakura/border-photo-2.webp");
   border-radius: 50%;
   width: 350px;
   height: 350px;

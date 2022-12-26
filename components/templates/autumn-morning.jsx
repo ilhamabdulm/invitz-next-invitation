@@ -85,32 +85,32 @@ const AutumnMorningTheme = ({
             id="autumn-morning-theme"
             className="w-full min-h-screen max-w-screen overflow-x-hidden"
           >
-            <section id="hero" class="h-screen">
+            <section id="hero" className="h-screen">
               <img
-                src="./assets/theme/autumn-morning/autumn-morning-flower-2.webp"
+                src="https://is3.cloudhost.id/invitz-bucket/theme/autumn-morning/autumn-morning-flower-2.webp"
                 alt="flower-1"
-                class="absolute h-[200px] w-[200px] lg:h-[300px] lg:w-[300px] -left-16 lg:-left-20 -top-8"
+                className="absolute h-[200px] w-[200px] lg:h-[300px] lg:w-[300px] -left-16 lg:-left-20 -top-8"
                 data-aos="fade-down-right"
               />
-              <div class="h-full text-[#3C2317]" data-aos="zoom-in">
-                <div class="h-full grid place-content-center px-2">
-                  <div class="text-center space-y-8">
-                    <p class="text-2xl lg:text-3xl">The Wedding of</p>
-                    <h1 class="text-4xl lg:text-6xl font-bold">
+              <div className="h-full text-[#3C2317]" data-aos="zoom-in">
+                <div className="h-full grid place-content-center px-2">
+                  <div className="text-center space-y-8">
+                    <p className="text-2xl lg:text-3xl">The Wedding of</p>
+                    <h1 className="text-4xl lg:text-6xl font-bold">
                       {data?.bride_nickname} & {data?.groom_nickname}
                     </h1>
                   </div>
-                  <div class="mt-12 grid grid-cols-3 items-center gap-12 text-xl text-center !font-semibold">
+                  <div className="mt-12 grid grid-cols-3 items-center gap-12 text-xl text-center !font-semibold">
                     <p>{data?.wedding_date_day}</p>
-                    <div class="text-center space-y-2">
-                      <h3 class="text-4xl">{data.wedding_date_date}</h3>
+                    <div className="text-center space-y-2">
+                      <h3 className="text-4xl">{data.wedding_date_date}</h3>
                       <p>{data.wedding_date_month}</p>
                     </div>
                     <p>{data.wedding_date_year}</p>
                   </div>
-                  <div class="flex justify-center mt-8" data-aos="zoom-in">
+                  <div className="flex justify-center mt-8" data-aos="zoom-in">
                     <img
-                      class="w-[200px] rotate-180"
+                      className="w-[200px] rotate-180"
                       src="./assets/ornaments/autumn-morning-ornament-branch.webp"
                       alt="ornament-2"
                     />
@@ -118,40 +118,40 @@ const AutumnMorningTheme = ({
                 </div>
               </div>
               <img
-                src="./assets/theme/autumn-morning/autumn-morning-flower-1.webp"
+                src="https://is3.cloudhost.id/invitz-bucket/theme/autumn-morning/autumn-morning-flower-1.webp"
                 alt="flower-1"
-                class="absolute h-[200px] w-[200px] lg:h-[300px] lg:w-[300px] bottom-2 -right-8"
+                className="absolute h-[200px] w-[200px] lg:h-[300px] lg:w-[300px] bottom-2 -right-8"
                 data-aos="fade-up-left"
               />
             </section>
 
             <img
-              src="./assets/theme/autumn-morning/autumn-morning-double-border.webp"
+              src="https://is3.cloudhost.id/invitz-bucket/theme/autumn-morning/autumn-morning-double-border.webp"
               alt="section-border"
-              class="w-full h-32 lg:h-full -mt-16 lg:-mt-32 relative object-cover"
+              className="w-full h-32 lg:h-full -mt-16 lg:-mt-32 relative object-cover"
             />
 
-            <section id="couples" class="px-8 mt-12 mb-24 max-lg mx-auto">
-              <div class="flex flex-col items-center gap-2">
+            <section id="couples" className="px-8 mt-12 mb-24 max-lg mx-auto">
+              <div className="flex flex-col items-center gap-2">
                 <Image
-                  class="w-[200px] rotate-180"
+                  className="w-[200px] rotate-180"
                   src="/assets/ornaments/simple-ornament-2.png"
                   alt="ornament-2"
                   width={200}
                   height={80}
                 />
-                <h2 class="text-center text-3xl">We are getting married!</h2>
+                <h2 className="text-center text-3xl">We are getting married!</h2>
                 <Image
-                  class="w-[200px]"
+                  className="w-[200px]"
                   src="/assets/ornaments/simple-ornament-2.png"
                   alt="ornament-2"
                   width={200}
                   height={80}
                 />
               </div>
-              <div class="flex justify-center">
+              <div className="flex justify-center">
                 <div
-                  class="my-12 text-center space-y-4 w-3/4"
+                  className="my-12 text-center space-y-4 w-3/4"
                   data-aos="zoom-in"
                 >
                   <p>Assalamu’alaikum Warahmatullahi Wabarakatuh</p>
@@ -162,7 +162,7 @@ const AutumnMorningTheme = ({
                   </p>
                 </div>
               </div>
-              <article class="flex items-center flex-col gap-4 lg:flex-row lg:justify-around">
+              <article className="flex items-center flex-col gap-4 lg:flex-row lg:justify-around">
                 <div
                   data-aos="fade-right"
                   className="flex flex-col items-center"
@@ -177,14 +177,14 @@ const AutumnMorningTheme = ({
                       />
                     </figure>
                   </div>
-                  <div class="text-center mt-6 space-y-2">
-                    <h4 class="text-2xl !font-semibold">{data.bride}</h4>
+                  <div className="text-center mt-6 space-y-2">
+                    <h4 className="text-2xl !font-semibold">{data.bride}</h4>
                     <p>
                       Putri dari Bapak {data.bride_dad} dan Ibu {data.bride_mom}
                     </p>
                   </div>
                 </div>
-                <h5 class="text-9xl text-center">&</h5>
+                <h5 className="text-9xl text-center">&</h5>
                 <div
                   data-aos="fade-left"
                   className="flex flex-col items-center"
@@ -199,8 +199,8 @@ const AutumnMorningTheme = ({
                       />
                     </figure>
                   </div>
-                  <div class="text-center mt-6 space-y-2">
-                    <h4 class="text-2xl !font-semibold">{data.groom}</h4>
+                  <div className="text-center mt-6 space-y-2">
+                    <h4 className="text-2xl !font-semibold">{data.groom}</h4>
                     <p>
                       Putra dari Bapak {data.groom_dad} dan Ibu {data.groom_mom}
                     </p>
@@ -262,22 +262,22 @@ const AutumnMorningTheme = ({
             <GMapsEmbed embedUrl={data?.events[0].embed_url} />
             <QuotesSection
               data={data}
-              waveBg="./assets/theme/autumn-morning/wave-bg.png"
+              waveBg="https://is3.cloudhost.id/invitz-bucket/theme/autumn-morning/wave-bg.png"
             />
 
             {data?.stories.length && data?.stories?.[0]?.title ? (
               <section id="stories" className="max-lg mx-auto px-8 my-24">
                 <div className="flex flex-col items-center gap-2">
                   <Image
-                    class="w-[200px] rotate-180"
+                    className="w-[200px] rotate-180"
                     src="/assets/ornaments/simple-ornament-2.png"
                     alt="ornament-2"
                     width={200}
                     height={80}
                   />
-                  <h2 class="text-center text-3xl">Our Stories</h2>
+                  <h2 className="text-center text-3xl">Our Stories</h2>
                   <Image
-                    class="w-[200px]"
+                    className="w-[200px]"
                     src="/assets/ornaments/simple-ornament-2.png"
                     alt="ornament-2"
                     width={200}

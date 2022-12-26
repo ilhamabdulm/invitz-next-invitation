@@ -21,7 +21,7 @@ export default function GiftDialog({ color = "#000000", giftMethods = [] }) {
           style={{ backgroundColor: color, opacity: 0.8 }}
           className={`rounded-md bg-opacity-20 px-4 py-2 text-sm font-medium text-white hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75`}
         >
-          <i class="fa-sharp fa-solid fa-gift"></i> Kirim Hadiah
+          <i className="fa-sharp fa-solid fa-gift"></i> Kirim Hadiah
         </button>
       </div>
 
@@ -78,7 +78,7 @@ export default function GiftDialog({ color = "#000000", giftMethods = [] }) {
                                 <div className="space-y-2 text-center">
                                   <h4>Alamat Rumah</h4>
                                   <p>
-                                    <i class="fa-solid fa-location-dot"></i>{" "}
+                                    <i className="fa-solid fa-location-dot"></i>{" "}
                                     &nbsp;
                                     {gift.address}
                                   </p>

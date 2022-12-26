@@ -80,7 +80,7 @@ const CalmBlueTheme = ({ data, username, refetchData = () => {}, to, gid }) => {
           >
             <section
               id="hero"
-              class="h-screen"
+              className="h-screen"
               style={{
                 backgroundImage: data.invitation_setup.hero_image
                   ? `url(${data.invitation_setup.hero_image})`
@@ -88,20 +88,20 @@ const CalmBlueTheme = ({ data, username, refetchData = () => {}, to, gid }) => {
               }}
             >
               <div
-                class="h-full text-[#3C2317] bg-blue-800/20 grid place-content-center "
+                className="h-full text-[#3C2317] bg-blue-800/20 grid place-content-center "
                 data-aos="zoom-in"
               >
-                <div class="py-12 px-24 rounded-lg bg-blue-800/30 text-white">
-                  <div class="text-center space-y-8">
-                    <p class="text-2xl lg:text-3xl">The Wedding of</p>
-                    <h1 class="text-4xl lg:text-6xl font-bold">
+                <div className="py-12 px-24 rounded-lg bg-blue-800/30 text-white">
+                  <div className="text-center space-y-8">
+                    <p className="text-2xl lg:text-3xl">The Wedding of</p>
+                    <h1 className="text-4xl lg:text-6xl font-bold">
                       {data?.bride_nickname} & {data?.groom_nickname}
                     </h1>
                   </div>
-                  <div class="mt-12 grid grid-cols-3 items-center gap-12 text-xl text-center !font-semibold">
+                  <div className="mt-12 grid grid-cols-3 items-center gap-12 text-xl text-center !font-semibold">
                     <p>{data?.wedding_date_day}</p>
-                    <div class="text-center space-y-2">
-                      <h3 class="text-4xl">{data.wedding_date_date}</h3>
+                    <div className="text-center space-y-2">
+                      <h3 className="text-4xl">{data.wedding_date_date}</h3>
                       <p>{data.wedding_date_month}</p>
                     </div>
                     <p>{data.wedding_date_year}</p>
@@ -110,27 +110,27 @@ const CalmBlueTheme = ({ data, username, refetchData = () => {}, to, gid }) => {
               </div>
             </section>
 
-            <section id="couples" class="px-8 mt-12 mb-24 max-lg mx-auto">
-              <div class="flex flex-col items-center gap-2">
+            <section id="couples" className="px-8 mt-12 mb-24 max-lg mx-auto">
+              <div className="flex flex-col items-center gap-2">
                 <Image
-                  class="w-[200px] rotate-180"
+                  className="w-[200px] rotate-180"
                   src="/assets/ornaments/simple-ornament-2.png"
                   alt="ornament-2"
                   width={200}
                   height={80}
                 />
-                <h2 class="text-center text-3xl">We are getting married!</h2>
+                <h2 className="text-center text-3xl">We are getting married!</h2>
                 <Image
-                  class="w-[200px]"
+                  className="w-[200px]"
                   src="/assets/ornaments/simple-ornament-2.png"
                   alt="ornament-2"
                   width={200}
                   height={80}
                 />
               </div>
-              <div class="flex justify-center">
+              <div className="flex justify-center">
                 <div
-                  class="my-12 text-center space-y-4 w-3/4"
+                  className="my-12 text-center space-y-4 w-3/4"
                   data-aos="zoom-in"
                 >
                   <p>Assalamu’alaikum Warahmatullahi Wabarakatuh</p>
@@ -141,7 +141,7 @@ const CalmBlueTheme = ({ data, username, refetchData = () => {}, to, gid }) => {
                   </p>
                 </div>
               </div>
-              <article class="flex items-center flex-col gap-4 lg:flex-row lg:justify-around">
+              <article className="flex items-center flex-col gap-4 lg:flex-row lg:justify-around">
                 <div
                   data-aos="fade-right"
                   className="flex flex-col items-center"
@@ -156,14 +156,14 @@ const CalmBlueTheme = ({ data, username, refetchData = () => {}, to, gid }) => {
                       />
                     </figure>
                   </div>
-                  <div class="text-center mt-6 space-y-2">
-                    <h4 class="text-2xl !font-semibold">{data.bride}</h4>
+                  <div className="text-center mt-6 space-y-2">
+                    <h4 className="text-2xl !font-semibold">{data.bride}</h4>
                     <p>
                       Putri dari Bapak {data.bride_dad} dan Ibu {data.bride_mom}
                     </p>
                   </div>
                 </div>
-                <h5 class="text-9xl text-center">&</h5>
+                <h5 className="text-9xl text-center">&</h5>
                 <div
                   data-aos="fade-left"
                   className="flex flex-col items-center"
@@ -178,8 +178,8 @@ const CalmBlueTheme = ({ data, username, refetchData = () => {}, to, gid }) => {
                       />
                     </figure>
                   </div>
-                  <div class="text-center mt-6 space-y-2">
-                    <h4 class="text-2xl !font-semibold">{data.groom}</h4>
+                  <div className="text-center mt-6 space-y-2">
+                    <h4 className="text-2xl !font-semibold">{data.groom}</h4>
                     <p>
                       Putra dari Bapak {data.groom_dad} dan Ibu {data.groom_mom}
                     </p>
@@ -245,15 +245,15 @@ const CalmBlueTheme = ({ data, username, refetchData = () => {}, to, gid }) => {
               <section id="stories" className="max-lg mx-auto px-8 my-24">
                 <div className="flex flex-col items-center gap-2">
                   <Image
-                    class="w-[200px] rotate-180"
+                    className="w-[200px] rotate-180"
                     src="/assets/ornaments/simple-ornament-2.png"
                     alt="ornament-2"
                     width={200}
                     height={80}
                   />
-                  <h2 class="text-center text-3xl">Our Stories</h2>
+                  <h2 className="text-center text-3xl">Our Stories</h2>
                   <Image
-                    class="w-[200px]"
+                    className="w-[200px]"
                     src="/assets/ornaments/simple-ornament-2.png"
                     alt="ornament-2"
                     width={200}
@@ -291,15 +291,15 @@ const CalmBlueTheme = ({ data, username, refetchData = () => {}, to, gid }) => {
               >
                 <div className="flex flex-col items-center gap-2 z-20">
                   <Image
-                    class="w-[200px] rotate-180"
+                    className="w-[200px] rotate-180"
                     src="/assets/ornaments/simple-ornament-2.png"
                     alt="ornament-2"
                     width={200}
                     height={80}
                   />
-                  <h2 class="text-center text-3xl">Our Gallery</h2>
+                  <h2 className="text-center text-3xl">Our Gallery</h2>
                   <Image
-                    class="w-[200px]"
+                    className="w-[200px]"
                     src="/assets/ornaments/simple-ornament-2.png"
                     alt="ornament-2"
                     width={200}

@@ -39,7 +39,7 @@ const GalleryTwoSection = ({
         <figure className="w-auto h-full relative overflow-y-auto mt-12 flex items-center justify-center gallery">
           <img
             className="w-full h-full absolute top-0"
-            src="./assets/theme/rustic/gallery-bg.webp"
+            src="https://is3.cloudhost.id/invitz-bucket/theme/rustic/gallery-bg.webp"
             alt="bg-gallery"
           />
 

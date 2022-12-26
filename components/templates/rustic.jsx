@@ -82,7 +82,7 @@ const RusticTheme = ({ data, username, refetchData = () => {}, to, gid }) => {
           >
             <section id="hero" className="h-screen">
               {/* <img
-                src="./assets/theme/rustic/hero-left.webp"
+                src="https://is3.cloudhost.id/invitz-bucket/theme/rustic/hero-left.webp"
                 alt="flower-1"
                 className="absolute h-[300px] lg:h-[500px] -top-12 lg:-top-24 -left-20"
                 data-aos="fade-down-right"
@@ -101,14 +101,14 @@ const RusticTheme = ({ data, username, refetchData = () => {}, to, gid }) => {
                   {/* <div className="flex justify-center mt-4">
                     <img
                       className="w-[200px] lg:w-[300px]"
-                      src="./assets/theme/rustic/text-bottom.webp"
+                      src="https://is3.cloudhost.id/invitz-bucket/theme/rustic/text-bottom.webp"
                       alt="ornament-2"
                     />
                   </div> */}
                 </div>
 
                 <img
-                  src="./assets/theme/rustic/hero-element.webp"
+                  src="https://is3.cloudhost.id/invitz-bucket/theme/rustic/hero-element.webp"
                   alt="flower-1"
                   className="absolute -bottom-2 h-[250px] lg:h-[500px] w-screen"
                   data-aos="fade-up"
@@ -120,7 +120,7 @@ const RusticTheme = ({ data, username, refetchData = () => {}, to, gid }) => {
 
               <img
                 className="w-full h-16 lg:h-24 absolute -bottom-2"
-                src="./assets/theme/rustic/wave-bg.webp"
+                src="https://is3.cloudhost.id/invitz-bucket/theme/rustic/wave-bg.webp"
                 alt="ornament-2"
               />
             </section>
@@ -129,7 +129,7 @@ const RusticTheme = ({ data, username, refetchData = () => {}, to, gid }) => {
               <div className="flex flex-col items-center gap-2">
                 <img
                   className="w-[200px]"
-                  src="./assets/theme/rustic/title-border.webp"
+                  src="https://is3.cloudhost.id/invitz-bucket/theme/rustic/title-border.webp"
                   alt="ornament-2"
                 />
                 <h2 className="text-center text-3xl">
@@ -158,7 +158,7 @@ const RusticTheme = ({ data, username, refetchData = () => {}, to, gid }) => {
                     <figure className="relative w-[280px] h-[315px] left-4">
                       <img
                         className="absolute h-[315px] -bottom-6 -left-28 z-10"
-                        src="./assets/theme/rustic/border-photo-1.webp"
+                        src="https://is3.cloudhost.id/invitz-bucket/theme/rustic/border-photo-1.webp"
                         alt="border-1"
                       />
                       <Image
@@ -169,7 +169,7 @@ const RusticTheme = ({ data, username, refetchData = () => {}, to, gid }) => {
                       />
                       <img
                         className="absolute h-[250px] bottom-0 -right-16 z-10"
-                        src="./assets/theme/rustic/border-photo-3.webp"
+                        src="https://is3.cloudhost.id/invitz-bucket/theme/rustic/border-photo-3.webp"
                         alt="border-2"
                       />
                     </figure>
@@ -185,7 +185,7 @@ const RusticTheme = ({ data, username, refetchData = () => {}, to, gid }) => {
                         href={`https://instagram.com/${data?.bride_instagram}`}
                         target="_blank"
                       >
-                        <i class="fa-brands fa-instagram"></i>{" "}
+                        <i className="fa-brands fa-instagram"></i>{" "}
                         {data?.bride_instagram}
                       </a>
                     </div>
@@ -201,7 +201,7 @@ const RusticTheme = ({ data, username, refetchData = () => {}, to, gid }) => {
                       {" "}
                       <img
                         className="absolute h-[315px] -bottom-6 -left-28 z-10"
-                        src="./assets/theme/rustic/border-photo-1.webp"
+                        src="https://is3.cloudhost.id/invitz-bucket/theme/rustic/border-photo-1.webp"
                         alt="border-1"
                       />
                       <Image
@@ -212,7 +212,7 @@ const RusticTheme = ({ data, username, refetchData = () => {}, to, gid }) => {
                       />
                       <img
                         className="absolute h-[250px] bottom-0 -right-16 z-10"
-                        src="./assets/theme/rustic/border-photo-3.webp"
+                        src="https://is3.cloudhost.id/invitz-bucket/theme/rustic/border-photo-3.webp"
                         alt="border-2"
                       />
                     </figure>
@@ -228,7 +228,7 @@ const RusticTheme = ({ data, username, refetchData = () => {}, to, gid }) => {
                         href={`https://instagram.com/${data?.groom_instagram}`}
                         target="_blank"
                       >
-                        <i class="fa-brands fa-instagram"></i>{" "}
+                        <i className="fa-brands fa-instagram"></i>{" "}
                         {data?.groom_instagram}
                       </a>
                     </div>
@@ -290,7 +290,7 @@ const RusticTheme = ({ data, username, refetchData = () => {}, to, gid }) => {
             <GMapsEmbed embedUrl={data?.events[0].embed_url} />
             <QuotesSection
               data={data}
-              waveBg="./assets/theme/rustic/wave-bg.webp"
+              waveBg="https://is3.cloudhost.id/invitz-bucket/theme/rustic/wave-bg.webp"
             />
 
             {data?.stories.length && data?.stories?.[0]?.title ? (
@@ -298,7 +298,7 @@ const RusticTheme = ({ data, username, refetchData = () => {}, to, gid }) => {
                 <div className="flex flex-col items-center gap-2">
                   <img
                     className="w-[200px]"
-                    src="./assets/theme/rustic/title-border.webp"
+                    src="https://is3.cloudhost.id/invitz-bucket/theme/rustic/title-border.webp"
                     alt="ornament-2"
                   />
                   <h2 className="text-center text-3xl">Love Stories</h2>
@@ -329,13 +329,13 @@ const RusticTheme = ({ data, username, refetchData = () => {}, to, gid }) => {
 
             <GalleryTwoSection
               gallery={data.gallery}
-              titleTopOrnament="./assets/theme/rustic/title-border.webp"
+              titleTopOrnament="https://is3.cloudhost.id/invitz-bucket/theme/rustic/title-border.webp"
             />
 
             {data.invitation_setup.rsvp === "on" ? (
               <RSVPSection
                 color="#AA8657"
-                topOrnament="./assets/theme/rustic/title-border.webp"
+                topOrnament="https://is3.cloudhost.id/invitz-bucket/theme/rustic/title-border.webp"
                 username={username}
                 to={to}
                 gid={gid}
@@ -345,7 +345,7 @@ const RusticTheme = ({ data, username, refetchData = () => {}, to, gid }) => {
             <WishesSection
               color="#AA8657"
               wishes={data?.wishes}
-              topOrnament="./assets/theme/rustic/title-border.webp"
+              topOrnament="https://is3.cloudhost.id/invitz-bucket/theme/rustic/title-border.webp"
               username={username}
               to={to}
               refetch={refetchData}
@@ -365,7 +365,7 @@ const RusticTheme = ({ data, username, refetchData = () => {}, to, gid }) => {
               </p>
               <img
                 className="w-[300px]"
-                src="./assets/theme/rustic/bottom-thank.webp"
+                src="https://is3.cloudhost.id/invitz-bucket/theme/rustic/bottom-thank.webp"
                 alt="ornament-2"
               />
             </section>

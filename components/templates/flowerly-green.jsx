@@ -86,7 +86,7 @@ const FlowerlyGreenTheme = ({
           >
             <section id="hero" className="h-screen">
               <img
-                src="./assets/theme/flowerly-green/hero-left.png"
+                src="https://is3.cloudhost.id/invitz-bucket/theme/flowerly-green/hero-left.png"
                 alt="flower-1"
                 className="absolute h-[360px] lg:h-[735px] -top-4 lg:top-8"
                 data-aos="fade-down-right"
@@ -105,7 +105,7 @@ const FlowerlyGreenTheme = ({
                   <div className="flex justify-center mt-4">
                     <img
                       className="w-[200px] lg:w-[300px]"
-                      src="./assets/theme/flowerly-green/text-bottom.png"
+                      src="https://is3.cloudhost.id/invitz-bucket/theme/flowerly-green/text-bottom.png"
                       alt="ornament-2"
                     />
                   </div>
@@ -116,7 +116,7 @@ const FlowerlyGreenTheme = ({
               </div>
 
               <img
-                src="./assets/theme/flowerly-green/hero-right.png"
+                src="https://is3.cloudhost.id/invitz-bucket/theme/flowerly-green/hero-right.png"
                 alt="flower-1"
                 className="absolute h-[275px] lg:h-[577px] bottom-2 lg:bottom-8 right-0"
                 data-aos="fade-up-left"
@@ -124,7 +124,7 @@ const FlowerlyGreenTheme = ({
 
               <img
                 className="w-full absolute -bottom-2"
-                src="./assets/theme/flowerly-green/wave-bg.png"
+                src="https://is3.cloudhost.id/invitz-bucket/theme/flowerly-green/wave-bg.png"
                 alt="ornament-2"
               />
             </section>
@@ -133,7 +133,7 @@ const FlowerlyGreenTheme = ({
               <div className="flex flex-col items-center gap-2">
                 <img
                   className="w-[200px]"
-                  src="./assets/theme/flowerly-green/title-border.png"
+                  src="https://is3.cloudhost.id/invitz-bucket/theme/flowerly-green/title-border.png"
                   alt="ornament-2"
                 />
                 <h2 className="text-center text-3xl">
@@ -179,7 +179,7 @@ const FlowerlyGreenTheme = ({
                         href={`https://instagram.com/${data?.bride_instagram}`}
                         target="_blank"
                       >
-                        <i class="fa-brands fa-instagram"></i>{" "}
+                        <i className="fa-brands fa-instagram"></i>{" "}
                         {data?.bride_instagram}
                       </a>
                     </div>
@@ -211,7 +211,7 @@ const FlowerlyGreenTheme = ({
                         href={`https://instagram.com/${data?.groom_instagram}`}
                         target="_blank"
                       >
-                        <i class="fa-brands fa-instagram"></i>{" "}
+                        <i className="fa-brands fa-instagram"></i>{" "}
                         {data?.groom_instagram}
                       </a>
                     </div>
@@ -281,7 +281,7 @@ const FlowerlyGreenTheme = ({
             >
               <img
                 className="w-full absolute -top-2 rotate-180"
-                src="./assets/theme/flowerly-green/wave-bg.png"
+                src="https://is3.cloudhost.id/invitz-bucket/theme/flowerly-green/wave-bg.png"
                 alt="ornament-2"
               />
               <article className="flex items-center w-full h-full text-white bg-[#0b0b0b]/50 px-8 lg:px-20 py-20">
@@ -314,7 +314,7 @@ const FlowerlyGreenTheme = ({
               </article>
               <img
                 className="w-full absolute -bottom-2"
-                src="./assets/theme/flowerly-green/wave-bg.png"
+                src="https://is3.cloudhost.id/invitz-bucket/theme/flowerly-green/wave-bg.png"
                 alt="ornament-2"
               />
             </section>
@@ -324,7 +324,7 @@ const FlowerlyGreenTheme = ({
                 <div className="flex flex-col items-center gap-2">
                   <img
                     className="w-[200px]"
-                    src="./assets/theme/flowerly-green/title-border.png"
+                    src="https://is3.cloudhost.id/invitz-bucket/theme/flowerly-green/title-border.png"
                     alt="ornament-2"
                   />
                   <h2 className="text-center text-3xl">Love Stories</h2>
@@ -351,14 +351,14 @@ const FlowerlyGreenTheme = ({
                           idx % 2 === 0 ? (
                             <div className="absolute -right-16 -bottom-16">
                               <img
-                                src="./assets/theme/flowerly-green/leaf-right.png"
+                                src="https://is3.cloudhost.id/invitz-bucket/theme/flowerly-green/leaf-right.png"
                                 alt="leaf-right"
                               />
                             </div>
                           ) : (
                             <div className="absolute -left-16 -bottom-16">
                               <img
-                                src="./assets/theme/flowerly-green/leaf-left.png"
+                                src="https://is3.cloudhost.id/invitz-bucket/theme/flowerly-green/leaf-left.png"
                                 alt="leaf-left"
                               />
                             </div>
@@ -373,15 +373,15 @@ const FlowerlyGreenTheme = ({
 
             <GallerySection
               gallery={data.gallery}
-              leftOrnament={"./assets/theme/flowerly-green/section-left.png"}
-              titleTopOrnament="./assets/theme/flowerly-green/title-border.png"
-              rightOrnament={"./assets/theme/flowerly-green/section-right.png"}
+              leftOrnament={"https://is3.cloudhost.id/invitz-bucket/theme/flowerly-green/section-left.png"}
+              titleTopOrnament="https://is3.cloudhost.id/invitz-bucket/theme/flowerly-green/title-border.png"
+              rightOrnament={"https://is3.cloudhost.id/invitz-bucket/theme/flowerly-green/section-right.png"}
             />
 
             {data.invitation_setup.rsvp === "on" ? (
               <RSVPSection
                 color="#4F4F4F"
-                topOrnament="./assets/theme/flowerly-green/title-border.png"
+                topOrnament="https://is3.cloudhost.id/invitz-bucket/theme/flowerly-green/title-border.png"
                 username={username}
                 to={to}
                 gid={gid}
@@ -391,7 +391,7 @@ const FlowerlyGreenTheme = ({
             <WishesSection
               color="#4F4F4F"
               wishes={data?.wishes}
-              topOrnament="./assets/theme/flowerly-green/title-border.png"
+              topOrnament="https://is3.cloudhost.id/invitz-bucket/theme/flowerly-green/title-border.png"
               username={username}
               to={to}
               refetch={refetchData}
@@ -411,7 +411,7 @@ const FlowerlyGreenTheme = ({
               </p>
               <img
                 className="w-[200px]"
-                src="./assets/theme/flowerly-green/text-bottom.png"
+                src="https://is3.cloudhost.id/invitz-bucket/theme/flowerly-green/text-bottom.png"
                 alt="ornament-2"
               />
             </section>

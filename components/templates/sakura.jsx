@@ -82,7 +82,7 @@ const SakuraTheme = ({ data, username, refetchData = () => {}, to, gid }) => {
           >
             <section id="hero" className="h-screen">
               <img
-                src="./assets/theme/sakura/hero-left.webp"
+                src="https://is3.cloudhost.id/invitz-bucket/theme/sakura/hero-left.webp"
                 alt="flower-1"
                 className="absolute h-[200px] lg:h-[300px] -top-12 lg:-top-24 -left-20"
                 data-aos="fade-down-right"
@@ -101,7 +101,7 @@ const SakuraTheme = ({ data, username, refetchData = () => {}, to, gid }) => {
                   <div className="flex justify-center mt-4">
                     <img
                       className="w-[200px] lg:w-[300px]"
-                      src="./assets/theme/sakura/text-bottom.webp"
+                      src="https://is3.cloudhost.id/invitz-bucket/theme/sakura/text-bottom.webp"
                       alt="ornament-2"
                     />
                   </div>
@@ -112,7 +112,7 @@ const SakuraTheme = ({ data, username, refetchData = () => {}, to, gid }) => {
               </div>
 
               <img
-                src="./assets/theme/sakura/hero-right.webp"
+                src="https://is3.cloudhost.id/invitz-bucket/theme/sakura/hero-right.webp"
                 alt="flower-1"
                 className="absolute h-[250px] lg:h-[300px] -bottom-4 lg:bottom-0 -right-20"
                 data-aos="fade-up-left"
@@ -120,7 +120,7 @@ const SakuraTheme = ({ data, username, refetchData = () => {}, to, gid }) => {
 
               <img
                 className="w-full absolute -bottom-2"
-                src="./assets/theme/sakura/wave-bg.webp"
+                src="https://is3.cloudhost.id/invitz-bucket/theme/sakura/wave-bg.webp"
                 alt="ornament-2"
               />
             </section>
@@ -129,7 +129,7 @@ const SakuraTheme = ({ data, username, refetchData = () => {}, to, gid }) => {
               <div className="flex flex-col items-center gap-2">
                 <img
                   className="w-[200px]"
-                  src="./assets/theme/sakura/title-border.webp"
+                  src="https://is3.cloudhost.id/invitz-bucket/theme/sakura/title-border.webp"
                   alt="ornament-2"
                 />
                 <h2 className="text-center text-3xl">
@@ -175,7 +175,7 @@ const SakuraTheme = ({ data, username, refetchData = () => {}, to, gid }) => {
                         href={`https://instagram.com/${data?.bride_instagram}`}
                         target="_blank"
                       >
-                        <i class="fa-brands fa-instagram"></i>{" "}
+                        <i className="fa-brands fa-instagram"></i>{" "}
                         {data?.bride_instagram}
                       </a>
                     </div>
@@ -207,7 +207,7 @@ const SakuraTheme = ({ data, username, refetchData = () => {}, to, gid }) => {
                         href={`https://instagram.com/${data?.groom_instagram}`}
                         target="_blank"
                       >
-                        <i class="fa-brands fa-instagram"></i>{" "}
+                        <i className="fa-brands fa-instagram"></i>{" "}
                         {data?.groom_instagram}
                       </a>
                     </div>
@@ -269,7 +269,7 @@ const SakuraTheme = ({ data, username, refetchData = () => {}, to, gid }) => {
             <GMapsEmbed embedUrl={data?.events[0].embed_url} />
             <QuotesSection
               data={data}
-              waveBg="./assets/theme/sakura/wave-bg.webp"
+              waveBg="https://is3.cloudhost.id/invitz-bucket/theme/sakura/wave-bg.webp"
             />
 
             {data?.stories.length && data?.stories?.[0]?.title ? (
@@ -277,7 +277,7 @@ const SakuraTheme = ({ data, username, refetchData = () => {}, to, gid }) => {
                 <div className="flex flex-col items-center gap-2">
                   <img
                     className="w-[200px]"
-                    src="./assets/theme/sakura/title-border.webp"
+                    src="https://is3.cloudhost.id/invitz-bucket/theme/sakura/title-border.webp"
                     alt="ornament-2"
                   />
                   <h2 className="text-center text-3xl">Love Stories</h2>
@@ -308,15 +308,15 @@ const SakuraTheme = ({ data, username, refetchData = () => {}, to, gid }) => {
 
             <GallerySection
               gallery={data.gallery}
-              titleTopOrnament="./assets/theme/sakura/title-border.webp"
-              rightOrnament="./assets/theme/sakura/gallery-bg-1.webp"
-              leftOrnament="./assets/theme/sakura/gallery-bg-2.webp"
+              titleTopOrnament="https://is3.cloudhost.id/invitz-bucket/theme/sakura/title-border.webp"
+              rightOrnament="https://is3.cloudhost.id/invitz-bucket/theme/sakura/gallery-bg-1.webp"
+              leftOrnament="https://is3.cloudhost.id/invitz-bucket/theme/sakura/gallery-bg-2.webp"
             />
 
             {data.invitation_setup.rsvp === "on" ? (
               <RSVPSection
                 color="#FF9494"
-                topOrnament="./assets/theme/sakura/title-border.webp"
+                topOrnament="https://is3.cloudhost.id/invitz-bucket/theme/sakura/title-border.webp"
                 username={username}
                 to={to}
                 gid={gid}
@@ -326,7 +326,7 @@ const SakuraTheme = ({ data, username, refetchData = () => {}, to, gid }) => {
             <WishesSection
               color="#FF9494"
               wishes={data?.wishes}
-              topOrnament="./assets/theme/sakura/title-border.webp"
+              topOrnament="https://is3.cloudhost.id/invitz-bucket/theme/sakura/title-border.webp"
               username={username}
               to={to}
               refetch={refetchData}
@@ -346,7 +346,7 @@ const SakuraTheme = ({ data, username, refetchData = () => {}, to, gid }) => {
               </p>
               <img
                 className="w-[300px]"
-                src="./assets/theme/sakura/bottom-thank.webp"
+                src="https://is3.cloudhost.id/invitz-bucket/theme/sakura/bottom-thank.webp"
                 alt="ornament-2"
               />
             </section>

@@ -86,7 +86,7 @@ const SoftPurpleTheme = ({
           >
             <section id="hero" className="h-screen">
               <img
-                src="./assets/theme/soft-purple/flower-1.webp"
+                src="https://is3.cloudhost.id/invitz-bucket/theme/soft-purple/flower-1.webp"
                 alt="flower-1"
                 className="absolute h-[250px] lg:h-[350px] -top-4 lg:-top-12 -left-28"
                 data-aos="fade-down-right"
@@ -105,7 +105,7 @@ const SoftPurpleTheme = ({
                   <div className="flex justify-center mt-4">
                     <img
                       className="w-[200px] lg:w-[300px]"
-                      src="./assets/theme/soft-purple/flower-4.webp"
+                      src="https://is3.cloudhost.id/invitz-bucket/theme/soft-purple/flower-4.webp"
                       alt="ornament-2"
                     />
                   </div>
@@ -116,7 +116,7 @@ const SoftPurpleTheme = ({
               </div>
 
               <img
-                src="./assets/theme/soft-purple/flower-2.webp"
+                src="https://is3.cloudhost.id/invitz-bucket/theme/soft-purple/flower-2.webp"
                 alt="flower-1"
                 className="absolute h-[225px] lg:h-[350px] bottom-2 lg:bottom-8 -right-24"
                 data-aos="fade-up-left"
@@ -124,7 +124,7 @@ const SoftPurpleTheme = ({
 
               <img
                 className="w-full absolute -bottom-4"
-                src="./assets/theme/soft-purple/wave-bg.png"
+                src="https://is3.cloudhost.id/invitz-bucket/theme/soft-purple/wave-bg.png"
                 alt="ornament-2"
                 height={200}
               />
@@ -134,7 +134,7 @@ const SoftPurpleTheme = ({
               <div className="flex flex-col items-center gap-2">
                 <img
                   className="w-[200px]"
-                  src="./assets/theme/soft-purple/flower-3.webp"
+                  src="https://is3.cloudhost.id/invitz-bucket/theme/soft-purple/flower-3.webp"
                   alt="ornament-2"
                 />
                 <h2 className="text-center text-3xl">
@@ -180,7 +180,7 @@ const SoftPurpleTheme = ({
                         href={`https://instagram.com/${data?.bride_instagram}`}
                         target="_blank"
                       >
-                        <i class="fa-brands fa-instagram"></i>{" "}
+                        <i className="fa-brands fa-instagram"></i>{" "}
                         {data?.bride_instagram}
                       </a>
                     </div>
@@ -212,7 +212,7 @@ const SoftPurpleTheme = ({
                         href={`https://instagram.com/${data?.groom_instagram}`}
                         target="_blank"
                       >
-                        <i class="fa-brands fa-instagram"></i>{" "}
+                        <i className="fa-brands fa-instagram"></i>{" "}
                         {data?.groom_instagram}
                       </a>
                     </div>
@@ -282,7 +282,7 @@ const SoftPurpleTheme = ({
             >
               <img
                 className="w-full absolute -top-2 rotate-180"
-                src="./assets/theme/soft-purple/wave-bg.png"
+                src="https://is3.cloudhost.id/invitz-bucket/theme/soft-purple/wave-bg.png"
                 alt="ornament-2"
               />
               <article className="flex items-center w-full h-full text-white bg-[#0b0b0b]/50 px-8 lg:px-20 py-20">
@@ -315,7 +315,7 @@ const SoftPurpleTheme = ({
               </article>
               <img
                 className="w-full absolute -bottom-2"
-                src="./assets/theme/soft-purple/wave-bg.png"
+                src="https://is3.cloudhost.id/invitz-bucket/theme/soft-purple/wave-bg.png"
                 alt="ornament-2"
               />
             </section>
@@ -325,7 +325,7 @@ const SoftPurpleTheme = ({
                 <div className="flex flex-col items-center gap-2">
                   <img
                     className="w-[200px]"
-                    src="./assets/theme/soft-purple/flower-3.webp"
+                    src="https://is3.cloudhost.id/invitz-bucket/theme/soft-purple/flower-3.webp"
                     alt="ornament-2"
                   />
                   <h2 className="text-center text-3xl">Love Stories</h2>
@@ -356,13 +356,13 @@ const SoftPurpleTheme = ({
 
             <GallerySection
               gallery={data.gallery}
-              titleTopOrnament="./assets/theme/soft-purple/flower-3.webp"
+              titleTopOrnament="https://is3.cloudhost.id/invitz-bucket/theme/soft-purple/flower-3.webp"
             />
 
             {data.invitation_setup.rsvp === "on" ? (
               <RSVPSection
                 color="#9B39FD"
-                topOrnament="./assets/theme/soft-purple/flower-3.webp"
+                topOrnament="https://is3.cloudhost.id/invitz-bucket/theme/soft-purple/flower-3.webp"
                 username={username}
                 to={to}
                 gid={gid}
@@ -372,7 +372,7 @@ const SoftPurpleTheme = ({
             <WishesSection
               color="#9B39FD"
               wishes={data?.wishes}
-              topOrnament="./assets/theme/soft-purple/flower-3.webp"
+              topOrnament="https://is3.cloudhost.id/invitz-bucket/theme/soft-purple/flower-3.webp"
               username={username}
               to={to}
               refetch={refetchData}
@@ -392,7 +392,7 @@ const SoftPurpleTheme = ({
               </p>
               <img
                 className="w-[200px]"
-                src="./assets/theme/soft-purple/flower-4.webp"
+                src="https://is3.cloudhost.id/invitz-bucket/theme/soft-purple/flower-4.webp"
                 alt="ornament-2"
               />
             </section>
